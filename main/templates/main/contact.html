@@ -1,0 +1,85 @@
+{% extends 'main/base.html' %}
+
+        {% block content %}
+            <section class="px-5" style="padding-top: 5em;">
+                <div class="container">
+                    <h1 class="text-center mb-lg-5 mb-3">
+                        Contact <span style="color: rgb(10, 223, 165);">Us</span>
+                    </h1>
+                    <div class="row px-lg-5">
+                        <div class="col-md-6 px-lg-5">
+                            <p class="text-light" style="line-height: 1.8; text-align: justify;">
+                                Do you have any questions? We recommend that you start searching 
+                                for the necessary information in the <a style="text-decoration: none;" href="{% url 'main:faq' %}">
+                                    <span style="color: rgb(10, 223, 165);">FAQ</span></a> 
+                                section. If you do not find the information you need, contact 
+                                beeLabbs support through the form below. Our team will 
+                                reach out to you within 24 hours.
+                            </p>
+                            <!-- <br> -->
+                            <div class="footer-address">
+                                <h5 class="mt-lg-5 mt-4 mb-1" style="text-transform: uppercase; font-weight: 700; color:rgb(19, 206, 193); ">our headquarters</h5>
+                                <small class="text-muted">26 London Lane, London, England, E8 3FU</small>
+                                
+                                <p><small class="text-muted" style="padding-top: 4px;">+2349031795292</small><p>
+                            </div>
+                            <div class="footer-address footer-address2" style="padding-top: px;">
+                                <h5 class="mb-1" style="text-transform: uppercase; font-weight: 700; color:rgb(19, 206, 193);">E-mail address</h5>
+                                <a class="text-muted" href="mailto:support@beeLabbs.pro"><small>support@beeLabbs.pro</small></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 px-lg-5 mt-lg-0 mt-5">
+                            <div class="contact">
+                                <form method="post" action="">
+                                    {% csrf_token %}
+                                    <!-- Name -->
+                                    <div>
+                                        {{ form.name }}
+                                        <label class="form-label fs-xs" for="name"></label>
+                                    </div>
+                                    <!-- Email -->
+                                    <div>
+                                        {{ form.email }}
+                                        <label class="form-label fs-xs" for="email"></label>
+                                    </div>
+                                    <!-- Subject -->
+                                    <div>
+                                        {{ form.subject }}
+                                        <label class="form-label fs-xs" for="subject"></label>
+                                    </div>
+                                    <!-- Message -->
+                                    <div class="">
+                                        {{ form.message }}
+                                        <label class="form-label fs-xs" for="message"></label>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-outline-primary" type="submit">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .contact input {
+                        height: 50px !important;
+                    }
+                    .contact .btn-outline-primary {
+                        border-radius: 5px;
+                        /* border: 0; */
+                        padding: 7px 30px;
+                    }
+                    .contact .btn-outline-primary:hover {
+                        background: linear-gradient(to right, rgb(38, 170, 249) 
+                            0%, rgb(19, 206, 193) 100%);
+                        border: 0;
+                        border: 2px solid rgb(0, 22, 97);
+                    }
+                    .contact input, textarea {
+                        font-size: 14px !important;
+                        color: #000 !important;
+                    }
+                </style>
+            </section>
+        {% endblock %}

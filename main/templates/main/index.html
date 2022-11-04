@@ -1,0 +1,765 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero px-lg-5 px-1" style="padding-top: 5em;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="text-light bounceInLeft wow" style="font-weight: 800;
+                 font-size: 4rem; line-height: 1;">
+                    Investments <br>that make your <br><span style="color: rgb(10, 223, 165);">fortune grow</span>
+                </h1>
+                <p style="font-size: 19px; letter-spacing: .5px;" class="pt-3">
+                    We guarantee your income with a high percentage by providing economic advice to large companies
+                    and investing in large volumes in the financial markets with a profitability of 96%, based on
+                    the intelligent methods and algorithms designed by the company itself in a completely exclusive 
+                    manner.
+                </p>
+                <div class="h1 rotateIn wow">
+                    <a href="" class="btn text-light btn-primary" style="font-size: 18px;">GET STARTED</a>
+                </div>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <div class="tilt-3d" data-tilt data-tilt-glare data-tilt-max-glare="0">
+                    <div class="tilt-3d-inner">
+                        <img src='{% static "img/banner-img.png" %}' alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features px-lg-5 px-1" style="padding-top: 5em;">
+    <div class="container">
+        <h1 class="text-center">Feature<span style="color: rgb(10, 223, 165);">s</span></h1>
+        <div class="row pt-3 ">
+            <div class="col-lg-4 col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body feature-card-body">
+                        <div class="text-center">
+                            <img src="{% static 'img/svg/support.png' %}" class="feature-card-img" alt="support">
+                        </div>
+                        <div class="card-title feature-card-title">
+                            <p class="lead text-center"><b>24/7 Customer Support</b></p>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                We provide 24/7 customer support through e-mail. Our support 
+                                representatives are always available to answer any questions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body feature-card-body">
+                        <div class="text-center">
+                            <img src="{% static 'img/svg/server.png' %}" alt="server" class="feature-card-img">
+                        </div>
+                        <div class="card-title feature-card-title">
+                            <p class="lead text-center"><b><em>Dedicated Server</em></b></p>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                We use a dedicated server with the highest level of DDOS protection 
+                                to ensure that your funds are always safe with us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body feature-card-body">
+                        <div class="text-center">
+                            <img src="{% static 'img/svg/ssl.png' %}" alt="ssl" style="width: 26px;" class="feature-card-img">
+                        </div>
+                        <div class="card-title feature-card-title">
+                            <p class="lead text-center"><b>EV SSL</b></p>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                Our website is secured with 256-bit encryption from Comodo 
+                                that verifies the authenticity of our company.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body feature-card-body">
+                        <div class="text-center">
+                            <img src="{% static 'img/svg/regsitered.png' %}" style="width: 26px;" class="feature-card-img" alt="registered">
+                        </div>
+                        <div class="card-title feature-card-title">
+                            <p class="lead text-center"><b><em>Registered Company</em></b></p>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                Our company is registered in the United Kingdom as “Buchii Ltd" .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body feature-card-body">
+                        <div class="text-center">
+                            <img src="{% static 'img/svg/instant.png' %}" class="feature-card-img" alt="instant">
+                        </div>
+                        <div class="card-title feature-card-title">
+                            <p class="lead text-center"><b>Instant Withdrawals</b></p>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                Our withdrawals are all processed swiftly after they are requested.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card feature-card">
+                    <div class="card-body feature-card-body">
+                        <div class="text-center">
+                            <img src="{% static 'img/svg/ddos.png' %}" class="feature-card-img" alt="ddos">
+                        </div>
+                        <div class="card-title feature-card-title">
+                            <p class="lead text-center"><b><em>DDoS Protected Systems</em></b></p>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                We use the highest level of protection . Our website can resists attacks of any size.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT US SECTION -->
+<section class="about px-lg-5 px-1" style="padding-top: 5em;">
+    <div class="container">
+        <h1 class="text-center">About <span style="color: rgb(10, 223, 165);">Us</span></h1>
+        <div class="row pt-3">
+            <div class="col-md-6">
+                <h4 style="color: rgb(39, 179, 252); letter-spacing: 2px;">
+                    JOIN US FOR GURANTEED PROFIT EVERYDAY
+                </h4>
+                <p class="bounceInLeft wow" style="line-height: 1.8; text-align: justify;">
+                    At the beginning of 2018, our company with the official name of beeLabbs Capital Diamond Consultants 
+                    started its work by forming a group of graduates and students in the field of software engineering 
+                    and economic management. In the beginning by setting up a detailed program, we were able to be very 
+                    successful in the field of economic consulting to companies and multiplying their profits in the shortest 
+                    possible time. Later, the company's activity was focused on financial markets and methods of forecasting 
+                    the market situation . . .
+                </p>
+            </div>
+            <div class="col-md-6 abt-img">
+                <div class="lightSpeedIn wow">
+                    <img src="{% static 'img/about-img.png' %}" alt="about-us" style="width: 600px; height: 300px;">
+                </div>
+
+                <!-- MISSION & VISION -->
+                <ul class="nav nav-tabs-alt px-4" role="tablist">
+                    <li class="nav-item">
+                        <a href="#vision" class="nav-link active" data-bs-toggle="tab" role="tab">
+                        Our Vision
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#mission" class="nav-link" data-bs-toggle="tab" role="tab">
+                        Our Mission
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" style="padding-left: 2.5em;">
+                    <div class="tab-pane fade show active" id="vision" role="tabpanel">
+                        <p style="line-height: 1.8;">
+                            As an open joint-stock company, our vision is to provide access for financial
+                            services offered by Buchii Crypto to individuals irrespective of their financial
+                            capability. With our low investment plans and high yield returns, we have gained 
+                            a global reputation.<br>
+                            Our management also focuses on web3 and metaverse coins which are highly profitable 
+                            and provide us maximum returns on our investment. We are also working with other 
+                            metaverse platforms as partners. 
+                            Our Company is fully insured with 100 Millions Insurance with some Different DEFI staking Pool.</p>
+                    </div>
+                    <div class="tab-pane fade" id="mission" role="tabpanel">
+                        <p style="line-height: 1.8;">
+                            <b>Our goal</b> is to help e-commerce enthusiasts, businessmen and those seeking 
+                            for a stable income to make a quick and stable profit with a successful investment.<br>
+                            The investment management potential created by the professionals working with the 
+                            Company had been the underlying reason of the transformation. Due to our outstanding
+                            performance in the past and having significantly expanded our assets, the decision 
+                            was made to start offering our investment products via specialized online services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INVESTMENT SECTION -->
+<section class="investment px-lg-5 px-1" style="padding-top: 5em;">
+    <div class="container">
+        <h1 class="text-center">
+            Investment <span style="color: rgb(10, 223, 165);">Plans</span>
+        </h1>
+        <div class="row pt-3" style="display: flex; justify-content: center;">
+            <!-- First -->
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="card card-invest card-hover rotateInDownLeft wow card-hover-primary">
+                    <div class="text-center text-light py-4" style="background: #000;">
+                        <h5 class="card-title text-light" style="position: relative;">BASIC PLAN</h5>
+                        <p class="btn btn-sm btn-primary" style="margin-bottom: 60px; padding: 2px 20px; color: white; cursor: auto;">Investment</p>
+                        <p>
+                            <span style="font-size: 60px; position: absolute; top: 1.5em; left: 0; padding-left: 25px; color: rgb(39, 179, 252)">
+                                20<b style="font-size: 30px;"><sup>%</sup></b></span>
+                            <span style="position: absolute; right: 0; padding-right: 25px; top: 8.5em; color: grey;">
+                                <em>DAILY</em></span>
+                        </p>
+                    </div>
+                    <div class="class-body text-light" style="background: rgb(0, 22, 97);">
+                        <ul class="list-unstyled text-left py-3 pb-2" style="display: flex; flex-direction:column;">
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Term</span>
+                                <span style="float: right;"><b>2 Days</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Daily Yield</span>
+                                <span style="float: right;"><b>20%</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Min</span>
+                                <span style="float: right;"><b>USD 80.00</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Max</span>
+                                <span style="float: right;"><b>USD 2,999.00</b></span>
+                            </li>
+                        </ul>
+                        <div class="text-center pb-3">
+                            <a href="" class="btn btn-sm btn-outline-primary invest">INVEST</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second -->
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="card card-invest card-hover card-hover-primary rotateIn wow">
+                    <div class="text-center text-light py-4" style="background: #000;">
+                        <h5 class="card-title text-light" style="position: relative;">GOLD PLAN</h5>
+                        <p class="btn btn-sm btn-primary" style="margin-bottom: 60px; padding: 2px 20px; color: white; cursor: auto;">Investment</p>
+                        <p>
+                            <span style="font-size: 60px; position: absolute; top: 1.5em; left: 0; padding-left: 25px; color: rgb(39, 179, 252)">
+                                40<b style="font-size: 30px;"><sup>%</sup></b></span>
+                            <span style="position: absolute; right: 0; padding-right: 25px; top: 8.5em; color: grey;">
+                                <em>DAILY</em></span>
+                        </p>
+                    </div>
+                    <div class="class-body text-light" style="background: rgb(0, 22, 97);">
+                        <ul class="list-unstyled text-left py-3 pb-2" style="display: flex; flex-direction:column;">
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Term</span>
+                                <span style="float: right;"><b>4 Days</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Daily Yield</span>
+                                <span style="float: right;"><b>40%</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Min</span>
+                                <span style="float: right;"><b>USD 3,000.00</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Max</span>
+                                <span style="float: right;"><b>USD 7,999.00</b></span>
+                            </li>
+                        </ul>
+                        <div class="text-center pb-3">
+                            <a href="" class="btn btn-sm btn-outline-primary invest">INVEST</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Third -->
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div class="card card-invest card-hover card-hover-primary rotateInDownRight wow">
+                    <div class="text-center text-light py-4" style="background: #000;">
+                        <h5 class="card-title text-light" style="position: relative;">PLATINUM PLAN</h5>
+                        <p class="btn btn-sm btn-primary" style="margin-bottom: 60px; padding: 2px 20px; color: white; cursor: auto;">Investment</p>
+                        <p>
+                            <span style="font-size: 60px; position: absolute; top: 1.5em; left: 0; padding-left: 25px; color: rgb(39, 179, 252)">
+                                68<b style="font-size: 30px;"><sup>%</sup></b></span>
+                            <span style="position: absolute; right: 0; padding-right: 25px; top: 8.5em; color: grey;">
+                                <em>DAILY</em></span>
+                        </p>
+                    </div>
+                    <div class="class-body text-light" style="background: rgb(0, 22, 97);">
+                        <ul class="list-unstyled text-left py-3 pb-2" style="display: flex; flex-direction:column;">
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Term</span>
+                                <span style="float: right;"><b>6 Days</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Daily Yield</span>
+                                <span style="float: right;"><b>68%</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Min</span>
+                                <span style="float: right;"><b>USD 8,000.00</b></span>
+                            </li>
+                            <li class="px-4">
+                                <span style="font-weight: 700;">Max</span>
+                                <span style="float: right;"><b>USD 40,000.00</b></span>
+                            </li>
+                        </ul>
+                        <div class="text-center pb-3">
+                            <a href="" class="btn btn-sm btn-outline-primary invest">INVEST</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table profit-check responsive" style="overflow-x: scroll;">
+            <div class="calu">
+                <table class="cal table table-hover">
+                    <thead style="color: rgb(255, 255, 255); font-weight: 600;">
+                        <tr>
+                            <td>
+                                <label style="">Select Plan</label>
+                                <select id="calc_plan" style="
+                                border: 0px;
+                                padding: 6px;
+                                width: 110%;
+                                border-radius: 30px;
+                                text-transform: capitalize;
+                                letter-spacing: 0.5px;
+                                outline: none;">
+                                    <option value="1">20% Daily For 2 Days</option>
+                                    <option value="2">40% Daily For 4 Days</option>
+                                    <option value="3">68% Daily For 6 Days</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </thead>
+                    
+                    <thead; style="color: rgb(255, 255, 255);">
+                        <tr>
+                            <th>Enter Amount</th>
+                            <th>Total Profit</th>
+                            <th>Total Percent</th>
+                            <th>Total Return</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input id="inv_amount" type="text" value="100">
+                            </td>
+                            <td>
+                                <input id="net_profit" class="profit-data" type="text" value="100" readonly="">
+                            </td>
+                            <td>
+                                <input id="assign_per" class="profit-data" type="text" value="100" readonly="">
+                            </td>
+                            <td>
+                                <input id="total_return" class="profit-data" type="text" value="100" readonly="">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--TESTIMONIES SECTION  -->
+<section class="testimonial px-lg-5 px-1" style="padding-top: 5em;">
+    <div class="container">
+        <h1 class="text-center mb-1"><span style="color: rgb(10, 223, 165);">Testimonies </span>from our Clients</h1>
+        <p class="text-center">
+            Our expertise in financial services has bettered the lives of our clients greatly.<br>
+            Their thoughtful testimonies have pushed us to do more.
+        </p>
+        <div class="row">
+            <!-- Review 1 -->
+            <div class="col-md-4 mb-5">
+                <figure class="d-flex flex-column h-100 mt-4 fadeInLeft wow">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-3" 
+                        style="background-color: black;">
+                        <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                            <i class="bx bxs-quote-left"></i>
+                        </span>
+                        <blockquote class="card-body pb-0 mb-0">
+                            <p class="pb-0 mb-0">After trading and mining I was able to withdraw my profits without any issues</p>
+                        </blockquote>
+                        <div class="card-footer border-0 text-nowrap pt-0">
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                        </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center pt-3">
+                    <img src="{% static '/img/avatar/03.jpg' %}" width="48" class="rounded-circle" alt="Fannie Summers">
+                        <div class="ps-3">
+                            <h6 class="fs-sm fw-semibold mb-0" style="color: rgb(10, 223, 165);">Fannie Summers</h6>
+                            <span class="fs-xs text-muted">Investor</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <!-- Review 2 -->
+            <div class="col-md-4 mb-5">
+                <figure class="d-flex flex-column h-100 mt-4 flipInX wow">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-3" 
+                        style="background-color: black;">
+                        <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                            <i class="bx bxs-quote-left"></i>
+                        </span>
+                        <blockquote class="card-body pb-0 mb-0">
+                            <p class="pb-0 mb-0">
+                                After my third successful investment, 
+                                I referred all my friends and family
+                            </p>
+                        </blockquote>
+                        <div class="card-footer border-0 text-nowrap pt-0">
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bx-star text-muted opacity-75"></i>
+                        </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center pt-3">
+                    <img src="{% static '/img/avatar/27.jpg' %}" width="48" class="rounded-circle" alt="Fannie Summers">
+                        <div class="ps-3">
+                            <h6 class="fs-sm fw-semibold mb-0" style="color: rgb(10, 223, 165);">Ralph Edwards</h6>
+                            <span class="fs-xs text-muted">Investor</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <!-- Review 3 -->
+            <div class="col-md-4 mb-5">
+                <figure class="d-flex flex-column h-100 mt-4 lightSpeedIn wow">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-3" 
+                        style="background-color: black;">
+                        <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                            <i class="bx bxs-quote-left"></i>
+                        </span>
+                        <blockquote class="card-body pb-0 mb-0">
+                            <p class="pb-0 mb-0">This is the best financial investment company with huge ROI rates</p>
+                        </blockquote>
+                        <div class="card-footer border-0 text-nowrap pt-0">
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                            <i class="bx bxs-star text-warning"></i>
+                        </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center pt-3">
+                    <img src="{% static '/img/avatar/08.jpg' %}" width="48" class="rounded-circle" alt="Fannie Summers">
+                        <div class="ps-3">
+                            <h6 class="fs-sm fw-semibold mb-0" style="color: rgb(10, 223, 165);">Annette Black</h6>
+                            <span class="fs-xs text-muted">Investor</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="our-services px-lg-5 px-1" style="padding-top: 5em;">
+    <div class="container">
+        <h1 class="text-center mb-1">Our <span style="color: rgb(10, 223, 125);">Services</span></h1>
+        <p class="text-center text-light ">
+            A brief rundown of some of the services we offer that makes us standout
+        </p>
+        <div class="row pt-3">
+            <!-- First -->
+            <div class="col-lg-6">
+                <div class="services-container wobble wow">
+                    <div class="services-inner">
+                        <!-- Item 1 -->
+                        <div class="services">
+                            <img src="{% static 'img/services/building-1.jpg' %}" class="img-fluid" alt="">
+                            <div class="services-text">Real Estates</div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="services">
+                            <img src="{% static 'img/services/oil-1.jpg' %}" class="img-fluid" alt="">
+                            <div class="services-text">Oil and Gas</div>
+                        </div>
+                        <!-- Item3 -->
+                        <div class="services">
+                            <img src="{% static 'img/services/stock-2.jpg' %}" class="img-fluid" alt="">
+                            <div class="services-text">Stock</div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="services">
+                            <img src="{% static 'img/services/stock-1.jpg' %}" class="img-fluid" alt="">
+                            <div class="services-text">Forex</div>
+                        </div>
+
+                        <div class="text-center services-dot">
+                            <div class="dot" onclick="currentSlide(1)"></div>
+                            <div class="dot" onclick="currentSlide(2)"></div>
+                            <div class="dot" onclick="currentSlide(3)"></div>
+                            <div class="dot" onclick="currentSlide(4)"></div>
+                        </div>
+                    </div>
+                    <!-- Prev button -->
+                    <button type="button" onclick="plusSlides(-1)" class="btn btn-prev prev btn-icon btn-sm me-2">
+                        <i class="bx bx-chevron-left"></i>
+                    </button>
+                    <!-- Next button -->
+                    <button type="button" onclick="plusSlides(1)" class="btn btn-next next btn-icon btn-sm ms-2">
+                        <i class="bx bx-chevron-right"></i>
+                    </button> 
+                </div>
+            </div>  
+            <!-- Second -->
+            <div class="col-lg-1"></div>                 
+            <!-- Third -->
+            <div class="col-lg-5 zoomIn wow" style="position: relative;">
+                <p style="line-height: 1.8;" class="py-lg-0 py-4">
+                    Following the boom of this industry, we quickly began to see some of the common 
+                    issues that were present when people tried to become involved. We took this need 
+                    into account along with our own personal ambition to develop an integrated platform 
+                    that was able to both satisfy the needs of investors and meet their expectations with 
+                    sufficient returns on their investments. Since then, we have maintained our focus as a 
+                    company that looks towards the future and transforms the opportunities offered to our valued clients.
+                </p>
+                <div class="services-btn">
+                    <a href="" class="btn btn-primary btn-lg-small">View our Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATISTICS -->
+<section class="statistics px-lg-5 px-1" style="padding-top: 5em;">
+    <div class="container">
+        <h1 class="text-center">Rain Check</h1>
+        <div class="row">
+            <!-- First -->
+            <div class="col-lg-6">
+                <iframe class="w-100 h-100" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_296ad&symbol=NASDAQ%3AAAPL&interval
+                =5&symboledit=1&saveimage=1&toolbarbg=f1f3f6&studies=%5B%5D&theme=light&style=1&timezone=Etc%2FUTC&studies_overrides
+                =%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=bimaxcoin.com&utm_medi
+                um=widget_new&utm_campaign=chart&utm_term=NASDAQ%3AAAPL" frameborder="0"></iframe>
+            </div>
+
+            <!-- Second -->
+            <div class="col-lg-6 shake wow">
+                <h2 class="text-center text-light pb-2">Stastist<span style="color: rgb(10, 223, 165);">ics</span></h2>
+                <div class="row">
+                    <div class="col-md-6" id="stats-container">
+                        <!-- Stat 1 -->
+                        <div class="stat-cont text-center text-light card-hover" style="box-shadow: 0 .5px 1px 0 white">
+                            <div class="stats-item px-5 pt-4 ml-6 mb-3 pb-1" style="box-shadow: 0 3px 10px 0 rgb(5, 33, 148)">
+                                <span><i class="bx bx-user fs-lg"></i></span>
+                                <h1 class="stat text-light mb-1" data-target="35251">0</h1>
+                                <p style="">Active Users</p>
+                            </div>
+                        </div>
+                        <!-- Stat 2 -->
+                        <div class="text-center text-light card-hover" style="box-shadow: 0 .5px 5px 0 white">
+                            <div class="stats-item px-5 pt-4 ml-6 mb-3 pb-1" style="box-shadow: 0 3px 10px 0 rgb(5, 33, 148)">
+                                <span><i class="bx bx-user fs-lg"></i></span>
+                                <h1 class="stat text-light mb-1" data-target="203">0</h1>
+                                <p>Awards Won</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="stats-container-1">
+                        <!-- Stat 3 -->
+                        <div class="text-center text-light card-hover" style="box-shadow: 0 .5px 5px 0 white">
+                            <div class="stats-item px-5 pt-4 ml-6 mb-3 pb-1" style="box-shadow: 0 3px 10px 0 rgb(5, 33, 148)">
+                                <span><i class="bx bx-user fs-lg"></i></span>
+                                <h1 class="stat text-light mb-1" data-target="1825">0</h1>
+                                <p>Running Days</p>
+                            </div>
+                        </div>
+                        <!-- Stat 4 -->
+                        <div class="text-center text-light card-hover" style="box-shadow: 0 .5px 1px 0 white">
+                            <div class="stats-item px-5 pt-4 ml-6 mb-3 pb-1" style="box-shadow: 0 3px 10px 0 rgb(5, 33, 148)">
+                                <span><i class="bx bx-user fs-lg"></i></span>
+                                <h1 class="stat text-light mb-1" data-target="205">0</h1>
+                                <p>Countries</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRANSACTIONS -->
+<section class="transactions px-lg-5 px-1" style="padding-top: 5em;">
+    <div class="container bg-light" style="height: 500px;">
+        <div class="row pb-3">
+            <div class="col-md-6">
+                <!-- <h3 class="text-center bg-dark">RECENT DEPOSITS</h3> -->
+                
+                {% for i in sub %}
+                    <ul class="d-flex">
+                        <li class="text-dark" style="padding-right: 5em;">{{ i.user.username }}</li>
+                        <li class="text-dark">{{ i.sub_amount }}</li>
+                    </ul>
+                {% endfor %}
+                    
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center bg-dark">RECENT WITHDRAWALS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        background: url("{% static 'img/bg-top.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
+    .about {
+        background: url("{% static 'img/plans-bg-down.png' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+</style>
+
+<script type="text/javascript">
+    // var a = {{ i.sub }}
+    /*====================*\
+   |   CAROUSEL + SLIDER    |
+    \*====================*/
+    let slideIndex = 1;
+    let myTimer;
+    let slideshowContainer;
+
+    window.addEventListener("load",function() {
+        showSlides(slideIndex);
+        myTimer = setInterval(function(){plusSlides(1)}, 6000);
+        // KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+        slideshowContainer = document.getElementsByClassName('services-inner')[0]; 
+        slideshowContainer.addEventListener('mouseenter', pause)
+        slideshowContainer.addEventListener('mouseleave', resume)
+    })
+
+    // NEXT AND PREVIOUS CONTROL
+    function plusSlides(n){
+        clearInterval(myTimer);
+        if (n < 0){
+            showSlides(slideIndex -= 1);
+        } else {
+        showSlides(slideIndex += 1); 
+        }
+        // KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+        if (n === -1){
+            myTimer = setInterval(function(){plusSlides(n + 2)}, 6000);
+        } else {
+            myTimer = setInterval(function(){plusSlides(n + 1)}, 6000);
+        }
+    }
+
+    // Controls the current slide and resets interval if needed
+    function currentSlide(n){
+        clearInterval(myTimer);
+        myTimer = setInterval(function(){plusSlides(n + 1)}, 6000);
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n){
+        let i;
+        let slides = document.getElementsByClassName("services");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+    // Pause the slider on mouse enter
+    pause = () => {
+        clearInterval(myTimer);
+    }
+    //  Resume the slider on mouse leave
+    resume = () =>{
+        clearInterval(myTimer);
+        myTimer = setInterval(function(){plusSlides(slideIndex)}, 6000);
+    }
+
+    /*====================*\
+   |        STATISTICS      |
+    \*====================*/
+    let section_counter = document.querySelector('#stats-container');
+    let sectionCounter = document.querySelector('#stats-container-1');
+    let counters = document.querySelectorAll('.stats-item .stat');
+    
+    let CounterObserver = new IntersectionObserver(
+        (entries, observer)=>{
+            let [entry] = entries;
+            if (!entry.isIntersecting) return;
+
+            let speed = 500;
+            counters.forEach((counter, index) => {
+                function UpdateCounter() {
+                    const targetNumber = +counter.dataset.target;
+                    const initialNumber = +counter.innerText;
+                    const incPercent = targetNumber / speed;
+                    if (initialNumber < targetNumber) {
+                        counter.innerText = Math.ceil(initialNumber + incPercent);
+                        setTimeout(UpdateCounter, 40);
+                    }
+                }
+                UpdateCounter();
+
+                if (counter.parentElement.style.animation) {
+                    counter.parentElement.style.animation = "";
+                }
+                else {
+                    counter.parentElement.style.animation = `slide-up 0.3s ease forwards 
+                    ${index / counters.length + 0.5}s`;
+                }
+            });
+        },
+        {
+        root:null,
+        threshold: 0.4,
+    });
+
+    CounterObserver.observe(section_counter);
+</script>
+
+{% endblock %}

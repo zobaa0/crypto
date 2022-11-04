@@ -1,0 +1,54 @@
+{% extends 'main/base.html' %}
+
+
+    {% block content %}
+        <!-- LOGIN PAGE -->
+        <section class="login px-lg-5 px-1" style="padding-top: 5em;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card" style="background: #141822; border: none;">
+                            <div class="card-body" style="box-shadow: rgb(5 33 148) 0px 3px 10px 0px;">
+                                <h2 class="text-center text-xl-start">Welcome Back</h2>
+                                <p class="text-center text-xl-start" style="font-size: 14px;">
+                                    Don't have an account yet? 
+                                    <a href="{% url 'account:register' %}">Register here.</a>
+                                </p>
+                                <hr style= "color: grey">
+                                <br>
+
+                                <!-- Render Errors -->
+                                {% if form.errors %}
+                                    <div class="alert alert-danger alert-dismissible fade show pb-0" role="alert">
+                                        <div id="form_errors" style="line-height: 1;">                                            
+                                            {% for key, value in form.errors.items  %}
+                                               <small>{{ value }}</small>
+                                            {% endfor %}                                                
+                                        </div>                                        
+                                        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                {% endif %}
+
+                                <form method="post" class="mb-3" style="letter-spacing: 1px;">
+                                    {% csrf_token %}
+                                    <div class="mb-3 form-group">
+                                        <label for="username" class="form-label text-light">Username *</label>
+                                        {{ form.username }}
+                                    </div>
+                                    <div class="mb-4 form-group">
+                                        <label for="password" class="form-label text-light">Password *</label>
+                                        {{ form.password }}
+                                    </div>
+                                    <!-- <br> -->
+                                    <button type="submit" class="btn btn-sm btn-primary w-100" 
+                                    style="border-radius: 7px; font-size: 14px;">Sign in</button>                                
+                                </form>
+                                <a href="#" class="btn btn-link btn-lg w-100">Forgot your password?</a>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock content %}
+    

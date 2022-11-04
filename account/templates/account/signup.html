@@ -1,0 +1,79 @@
+{% extends 'main/base.html' %}
+
+
+    {% block content %}
+        <!-- SIGNUP PAGE -->
+        <section class="register px-lg-5 px-1" style="padding-top: 5em;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card" style="background: #141822; border: none;">
+                            <div class="card-body" style="box-shadow: rgb(5 33 148) 0px 3px 10px 0px;">
+                                <h2 class="text-center text-xl-start">Create Account</h2>
+                                <p class="text-center text-xl-start" style="font-size: 14px;">
+                                    Already have an account? 
+                                    <a href="{% url 'account:login' %}">Sign in here.</a>
+                                </p>
+                                <hr style= "color: grey">
+                                <br>
+                                <!-- Render Errors -->
+                                {% if form.errors %}
+                                    <div class="alert alert-danger alert-dismissible fade show pb-0" role="alert">
+                                        <div id="form_errors" style="line-height: 1;">                                            
+                                            {% for key, value in form.errors.items  %}
+                                               <small>{{ value }}</small>
+                                            {% endfor %}                                                
+                                        </div>                                        
+                                        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                {% endif %}
+
+                                <form method="post" class="mb-3" style="letter-spacing: 1px;">
+                                    {% csrf_token %}
+                                    <div class="mb-3 form-group">
+                                        <label for="username" class="form-label text-light">Username *</label>
+                                        <!-- <input class="form-control form-control-md" id="username" type="text" placeholder="johnny"> -->
+                                        {{ form.username }}
+                                    </div>
+                                    <div class="mb-3 form-group">
+                                        <label for="email" class="form-label text-light">E-mail *</label>
+                                        <!-- <input class="form-control form-control-md" id="email" type="email" placeholder="johnny@email.com"> -->
+                                        {{ form.email }}
+                                    </div>
+                                    <div class="mb-3 form-group">
+                                        <label for="password1" class="form-label text-light">Password *</label>
+                                        <!-- <input class="form-control form-control-md" id="password1" type="password" placeholder="*****"> -->
+                                        {{ form.password1 }}
+                                    </div>
+                                    <div class="mb-4 form-group">
+                                        <label for="password2" class="form-label text-light">Confirm Password *</label>
+                                        <!-- <input class="form-control form-control-md" id="password2" type="password" placeholder="*****"> -->
+                                        {{ form.password2 }}
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <!-- <input type="checkbox" id="terms" class="form-check-input"> -->
+                                        {{ form.terms }}
+                                        <label for="terms" class="form-check-label">I agree to 
+                                            <a href="{% url 'main:terms' %}">Terms &amp; Conditions</a>
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-sm btn-primary w-100" 
+                                    style="border-radius: 7px; font-size: 14px;">Sign Up</button>                                
+                                </form>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <style>
+            input {
+                color: #30333c !important;
+                font-weight: 600 !important;
+            }
+        </style> -->
+
+    {% endblock content %}
+    

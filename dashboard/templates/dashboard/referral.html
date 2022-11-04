@@ -1,0 +1,76 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+    <!-- TITLE -->
+    {% block title %}
+        beeLabbs | Dashboard | Transactions
+    {% endblock title %}
+
+    <!-- HEADING -->
+    {% block heading %}
+        TRANSACTIONS
+    {% endblock heading %}
+    
+    <!-- MAIN CONTENT -->
+    {% block content %}
+        <!-- TRANSACTIONS -->
+        <section class="summary px-lg-5 px-3 py-3">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <p><strong style="color:rgb(10, 223, 165); font-size: 18px;">
+                        My Referrals
+                    </strong> <br>
+                    <small>
+                        Share your link with your friends and earn a percentage on their first deposit
+                    </small>
+                    </p>
+                    <!-- TODO: DISPLAY THE REF CODE OF THE USER -->
+
+                    <!-- Dark table with striped rows -->
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                <th>S/N</th>
+                                <th>Referral</th>
+                                <th>Bonus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if not referrals %}
+                                    <tr>
+                                        <td><em>No data to display at the moment.</em></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                {% else %}
+                                    {% for i in referrals %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}.</td>
+                                            <td>{{ i.user|title }}</td>
+                                            <td>${{ i.bonus }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-center pt-3">
+                    {% include 'dashboard/includes/pagination.html' with page=referrals %}
+                </div>
+            </div>           
+        </section>
+
+        <style>
+            .table-striped>tbody>tr:nth-of-type(odd)>* {
+                color: '';
+            }
+            .table-dark {
+                --si-table-striped-bg: #30333c;
+            }
+        </style>
+    {% endblock content %}
+        

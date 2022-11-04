@@ -1,0 +1,41 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+    <!-- TITLE -->
+    {% block title %}
+        beeLabbs | Dashboard | Deposit
+    {% endblock title %}
+
+    <!-- HEADING -->
+    {% block heading %}
+        DEPOSIT
+    {% endblock heading %}
+    
+    <!-- MAIN CONTENT -->
+    {% block content %}
+        <section class="summary px-lg-5 px-3 py-3">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card bg-transparent">
+                        <div class="card-body">
+                            <h1 class="text-center">Hello {% block name %} {% endblock %}</h1>
+                            <p>
+                                You initiated a deposit request. Kindly make a deposit of 
+                                <span style="color: green;"> <b>${% block amount %}{% endblock %}
+                                </b> </span> to the Company's Address below.
+                            </p>
+                            <p></p>
+                            <input type="text" class="form-control form-control-sm">
+                            <small>This address accepts only {% block currency %}{% endblock %}</small>
+                            <p></p>
+                            <p>Your chosen plan is: {% block plan %}{% endblock %}</p>
+                            <p>Your account will be automatically credited once your payment is verified on the BlockChain network</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    {% endblock content %}
+        

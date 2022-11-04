@@ -1,0 +1,6 @@
+{% extends 'dashboard/deposit/base.html' %}
+
+{% block name %}{{ plan.user.username }}{% endblock %}
+{% block amount %}{{ plan.sub_amount }}{% endblock %}
+{% block currency %}{{ plan.get_sub_currency_display }}{% endblock %}
+{% block plan %}{{ plan.plan.plan_name }}{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'main/base.html' %}
+    {% load static %}
+        {% block content %}
+            <section class="terms px-5" style="padding-top: 5em;">
+                <div class="container">
+                    <h1 class="text-center text-light mb-lg-5 mb-3">
+                        Terms & <span style="color: rgb(10, 223, 165);">Condition</span>
+                    </h1>
+                    <p style="line-height: 1.7; letter-spacing: 0.5px">
+                        Please read this agreement carefully before using the company's services. <br>
+                        Registering on the site and creating a user account means accepting all the terms of the agreement.
+                    </p>
+                    <div class="general">
+                        <p style="line-height: 1.7; letter-spacing: 0.5px">
+                            <span style="font-weight: bold; color: rgb(39, 179, 252); font-size: 19px;">
+                                - General terms
+                            </span> <br>
+                            The legal department of the company prepared this agreement between beeLabbs Diamond Consultants 
+                            (hereinafter referred to as the company) and registered users on the site (hereinafter referred to as investors). <br>
+                            Before registering, every user must read all the items carefully and register after accepting the agreement. <br>
+                            The legal department of the company can modify any part of the agreement without prior notice. <br>
+                            The company has the right to change part of the working conditions if necessary 
+                            (such as changes in the lottery system, changes in investment plans for new investors, etc.)
+                        </p>
+                        <p style="line-height: 1.7; letter-spacing: 0.5px">
+                            <span style="font-weight: bold; color: rgb(39, 179, 252); font-size: 19px;">
+                                - Access and resources
+                            </span> <br>
+                            The only valid address of the company's online investment section is beeLabbs.com <br>
+                            The company provides the investor's profit through their indirect participation in cryptocurrency 
+                            trading as well as other financial markets.
+                        </p>
+                        <p style="line-height: 1.7; letter-spacing: 0.5px">
+                            <span style="font-weight: bold; color: rgb(39, 179, 252); font-size: 19px;">
+                                - Registration and investment
+                            </span> <br>
+                            Any person is allowed to register on the site according to the conditions and age 
+                            rules for doing business in his country of residence. If it becomes clear to us that 
+                            you are not allowed to do business, your account will be blocked and there is a possibility 
+                            that the capital will be locked until you obtain the permitted conditions. <br>
+                            Each person can have only one user account, and if we notice duplicate accounts, we reserve
+                            the right to block both accounts and lock all capital.
+                        </p>
+                        <p style="line-height: 1.7; letter-spacing: 0.5px">
+                            <span style="font-weight: bold; color: rgb(39, 179, 252); font-size: 19px;">
+                                - Deposit and withdrawal
+                            </span> <br>
+                            Deposits and withdrawals of the company are made through valid and active gateways. <br>
+                            The minimum amount depends on the specified digital currency, which is specified in 
+                            the deposit or withdrawal section. <br>
+                            Deposits and withdrawals are made through pre-defined digital currencies, and any 
+                            changes in this matter will be notified on the main page of the site. <br>
+                            Deposits are made in less than a few minutes. <br>
+                            Withdrawal from the account will be done up to 48 hours after the request.
+                        </p>
+                    </div>
+                    <p style="line-height: 1.7; letter-spacing: 0.5px">
+                        <span style="font-weight: bold; color: rgb(39, 179, 252); font-size: 19px;">
+                            - Participation commission
+                        </span> <br>
+                        Every investor can invite his friends to invest in the company and receive a percentage 
+                        (based on the plan listed on the main page of the site) of the amount of capital. <br>
+                        The participation commission is defined in three levels.
+                    </p>
+                    <p style="line-height: 1.7; letter-spacing: 0.5px">
+                        <span style="font-weight: bold; color: rgb(39, 179, 252); font-size: 19px;">
+                            - Possible risks
+                        </span> <br>
+                        The company's technical and programming team guarantees the health and quality of our 
+                        services, but there is always a possibility that the site will be temporarily unavailable 
+                        for reasons such as updating, fixing bugs, trying to prevent attacks, and similar things. <br>
+                        Due to the high risk of investment, beeLabbs is never legally responsible for any possible 
+                        damage to the investor. <br>
+                        By registering on the company's website, the investor independently accepts all possible 
+                        risks, including the loss of capital.
+                    </p>
+                    <p style="line-height: 1.7; letter-spacing: 0.5px">
+                        <span style="font-weight: bold; color: rgb(39, 179, 252); font-size: 19px;">
+                            - Abuse
+                        </span> <br>
+                        Don't post bad vote on Public Forums and at Gold Rating Site without contacting the 
+                        administrator of our program FIRST. Maybe there was a technical problem with your transaction, 
+                        so please always CLEAR the thing with the administrator. <br>
+                        We will not tolerate SPAM or any type of UCE in this program. SPAM violators will be immediately 
+                        and permanently removed from the program.
+                    </p>
+                    <p style="line-height: 1.7; letter-spacing: 0.5px">
+                        <span style="font-weight: bold; color: rgb(39, 179, 252); font-size: 19px;">
+                            - Conclusion
+                        </span> <br>
+                        This agreement between the parties of the company and the investor is established and 
+                        applicable from the time of user registration. <br>
+                        If some of the provisions of the agreement become unenforceable, it will not affect 
+                        the other provisions of the agreement. <br>
+                        If you do not agree with the above disclaimer, please do not go any further.
+                    </p>
+                </div>
+            </section>
+
+            <style>
+                /* TERMS PAGE */
+                .general {
+                background: url("{% static 'img/plans-bg-down.png' %}");
+                background-size: right;
+                background-repeat: no-repeat;
+                background-position: left center;
+            }
+            </style>
+        {% endblock %}

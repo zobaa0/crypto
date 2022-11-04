@@ -1,0 +1,144 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- HOW TO INVEST -->
+<section class="px-5 howto" style="padding-top: 5em;"> 
+    <div class="container">
+        <!-- Vertical steps -->
+        <div class="steps px-lg-5">
+            <!-- Step -->
+            <div class="step">
+                <div class="step-number bg-dark">
+                    <div class="step-number-inner bg-danger">1</div>
+                </div>
+                <div class="step-body">
+                    <div class="start-block h-100">
+                        <div class="start-top d-flex justify-content-between">
+                            <h2>Open an <b style="color: rgb(10, 223, 165);">Account</b></h2>
+                            <figure class="text-center mr-2 d-none d-md-block">
+                                <img src="{% static 'img/icons/signup.png' %}">
+                            </figure>
+                        </div>
+                        <p>
+                            To become a member of beeLabbs, you need first to open a free account. 
+                            It's quite easy and doesn't take much time, but you will get an opportunity 
+                            to become an investor and earn profit. For that, you must complete the registration 
+                            process. In order to register yourself as a member of beeLabbs, click on the 
+                            "Sign Up" button, fill in the registration form and press "Register". 
+                            Your account is ready to use! You are obliged to provide only complete and accurate 
+                            information about yourself (the "Registration Data") when registering as a Member. 
+                        </p>     
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="step-number bg-dark">
+                    <div class="step-number-inner bg-danger">2</div>
+                </div>
+                <div class="step-body">
+                    <div class="start-block h-100">
+                        <div class="start-top d-flex justify-content-between">
+                            <h2><b style="color: rgb(10, 223, 165)";>Deposit </b>Funds</h2>
+                            <figure class="text-center mr-2 d-none d-md-block">
+                                <img src="{% static 'img/icons/deposit.png' %}">
+                            </figure>
+                        </div>
+                        <p>
+                            To make a deposit, log into your beeLabbs account using your login and password. 
+                            Choose "Make Deposit" section, select an investment plan most appropriate for you, 
+                            decide what amount to invest and what term to choose. Select the required electronic 
+                            payment system (so-called EPS). Pay amount of minimal or maximal deposit that is stated 
+                            in it, in accordance with chosen investment plan. Follow the instructions of EPS and 
+                            approve the payment finally. Wait for adding funds on your balance. It can take from 
+                            a few seconds up to few hours.
+                        </p>     
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="step-number bg-dark">
+                    <div class="step-number-inner bg-danger">3</div>
+                </div>
+                <div class="step-body">
+                    <div class="start-block h-100">
+                        <div class="start-top d-flex justify-content-between">
+                            <h2><b style="color: rgb(10, 223, 165)";>Getting </b>Profit</h2>
+                            <figure class="text-center mr-2 d-none d-md-block">
+                                <img src="{% static 'img/icons/profits.png' %}">
+                            </figure>
+                        </div>
+                        <p>
+                            All accruals of profit are done automatically and in accordance with chosen investment 
+                            plan. Depending on the amount of your deposit and the term of chosen investment period, 
+                            you will receive guaranteed income after a certain period of time. Your earnings is 
+                            dependent on your investment plan and can be in Daily basis or at the end of investment 
+                            term. To calculate your income please use our Profit Calculator.
+                        </p>     
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Step 4 -->
+            <div class="step">
+                <div class="step-number">
+                    <div class="step-number-inner">4</div>
+                </div>
+                <div class="step-body">
+                    <div class="start-block h-100">
+                        <div class="start-top d-flex justify-content-between">
+                            <h2><b style="color: rgb(10, 223, 165)";>Withdraw </b>Funds</h2>
+                            <figure class="text-center mr-2 d-none d-md-block">
+                                <img src="{% static 'img/icons/wallet.png' %}">
+                            </figure>
+                        </div>
+                        <p>
+                            When profit is accrued on your account balance, you can withdraw it via electronic payment 
+                            system. Log into the account, then select the "Withdraw" section. Type an amount, which 
+                            you want to withdraw, choose payment system and click "Withdraw" button. Now just wait 
+                            for the money that was requested during the withdrawal at your electronic wallet. 
+                            Your withdrawal request will be processed in the fastest timeframe possible, as per the 
+                            online availability of our support staff (up to 48 hours).
+                        </p>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    /* HOWTO PAGE */
+    .step-number {
+        background: linear-gradient(to left, rgb(0, 22, 97) 0%, rgb(3, 51, 211) 100%);
+    }
+
+    .step-number-inner {
+        background: linear-gradient(to left,rgb(7, 229, 157) -30%, rgb(0, 22, 97) 100%);
+    }
+    
+    .start-block {
+        background: linear-gradient(rgba(2, 10, 74, 0.6) 0%, rgba(2, 10, 74, 0.6) 1%,
+        rgba(23, 39, 154, 0.6) 51%, rgba(13, 25, 121, 0.6) 98%,
+        rgba(13, 25, 121, 0.6) 100%);
+        padding: 35px;
+        border-radius: 16px;
+    }
+
+    .start-block h2 {
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    .start-block p {
+        line-height: 30px;
+    }
+</style>
+
+<!-- class="step": style="padding-right: 150px; padding-left: 50px;" -->
+{% endblock %}
