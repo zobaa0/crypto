@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+# from celery.schedules import  crontab
+# import dashboard.tasks
 # import dj_database_url
 # import django_on_heroku
 # from decouple import config, Csv
@@ -35,15 +37,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-88$utcmg&94ugcl$l-3vwlkiwek2!lkmka#8v*glx+qzrq=3hp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', '18.168.249.187']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +60,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,6 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 'dashboard.context_processors.get_crypto_price',
             ],
         },
     },
@@ -164,7 +167,7 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
@@ -179,14 +182,29 @@ AUTH_USER_MODEL = 'account.CustomUser'
 
 AUTHENTICATION_BACKENDS = ['account.backends.EmailBackend']
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# # Email Server Configuration
-# EMAIL_HOST = 'smtp.mailtrap.io'
-# EMAIL_HOST_USER = '403036f6ba83e8'
-# EMAIL_HOST_PASSWORD = '945531ee4c702d'
-# EMAIL_PORT = '2525'
-# EMAIL_USE_TLS = True
+# CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_BROKER_URL = 'amqp://guest@localhost:5672//'
+
+CELERY_RESULT_BACKEND = 'rpc://localhost'
+
+# CELERY_BEAT_SCHEDULE = {
+#     "deactivate_subscription": {
+#         'task': 'dashboard.tasks.deactivate_subscription',
+#         'schedule': crontab(hour='*/1'),
+#     },
+# }
+
+# Email Server Configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'currylabbs@gmail.com'
+EMAIL_HOST_PASSWORD = 'mhugwyjxigvrhfns'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
+
 
 
 # RECIPIENT_ADDRESS = 

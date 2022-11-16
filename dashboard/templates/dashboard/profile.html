@@ -42,7 +42,8 @@
           </div>
           <div class="col-sm-6 mb-4">
             <label for="username" class="form-label fs-base">Username</label>
-            <input type="text" id="username" class="form-control form-control-md" value="{{ request.user.username|title }}" readonly>
+            <input type="text" id="username" class="form-control form-control-md" style="background: lightslategrey; font-weight: bold;"
+            value="{{ request.user.username|title }}" disabled>
             <!-- <div class="invalid-feedback">Please provide a valid email address!</div> -->
           </div>
           <input type="hidden" name="form_type" value="formOne">
@@ -99,10 +100,29 @@
         {% csrf_token %}
         <div class="form-check mb-4">
           {{ delete_account.del_account }}
-          <label for="delete-account" class="form-check-label fs-base">Yes, I want to delete my account</label>
+          <label for="delete-account" class="form-check-label">Yes, I want to delete my account</label>
         </div>
         <input type="hidden" name="form_type" value="formThree">
-        <button type="submit" class="btn btn-danger" name="form3">Delete</button>
+        <p data-bs-toggle="modal" data-bs-target="#del_account" class="btn btn-danger" name="form3">Delete</p>
+
+        <!-- DELETE ACCOUNT MODAL -->
+        <div class="modal fade" id="del_account" tabindex="-1" role="dialog" style="margin-top: 10em;">
+          <div class="modal-dialog modal-sm" role="document">
+              <div class="modal-content" style="background: #141822;">
+                  <div class="modal-body">
+                      <h6>Confirm Delete</h6>
+                      <p>
+                        Are you sure you want to delete your account?  
+                      </p>
+                      <button type="submit" class="btn btn-danger w-100 btn-sm" name="form3">Confirm</button>
+                      <br>
+                      <button type="button" class="btn btn-warning btn-sm w-100 mt-2" data-bs-dismiss="modal">
+                          Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+        </div>
       </form>
     </div>
   </div>

@@ -1,12 +1,11 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm
+from django.contrib.auth.forms import (UserCreationForm, AuthenticationForm, 
+                                       PasswordChangeForm, PasswordResetForm)
 from django.utils.translation import gettext_lazy as _
 
 # Custom user model
 UserModel = get_user_model()
-
-
 
 class NewUserForm(UserCreationForm):
     """
@@ -63,10 +62,10 @@ class NewUserForm(UserCreationForm):
         """Case in-sensitive username"""
         cleaned_data = super(NewUserForm, self).clean()
         username = cleaned_data.get('username')
-        terms = cleaned_data.get('terms')
         if username and UserModel.objects.filter(username__iexact=username).exists():
             self.add_error("username", "A user with this username already exists.")
         return cleaned_data
+
 
 
 class UserLoginForm(AuthenticationForm):
@@ -120,3 +119,15 @@ class PasswordChange(PasswordChangeForm):
                                         'class': 'form-control form-control-md',
                                         'id': 'new_password2',
                                     }))
+
+
+class ResetPasswordForm(PasswordResetForm):
+    """"Reset User's Password"""
+    email = forms.EmailField(required=True,
+                             max_length=30,
+                             help_text="Enter a valid email address",
+                             widget=forms.TextInput(attrs={
+                                'placeholder': 'Enter Email',
+                                'class': 'form-control form-control-md',
+                                'id': 'email'
+                            }))

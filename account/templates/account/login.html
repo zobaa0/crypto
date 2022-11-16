@@ -1,9 +1,12 @@
 {% extends 'main/base.html' %}
 
+    {% block title %}
+    Xendcoin - Login
+    {% endblock title %}
 
     {% block content %}
         <!-- LOGIN PAGE -->
-        <section class="login px-lg-5 px-1" style="padding-top: 5em;">
+        <section class="login px-lg-5 px-1" style="padding-top: 10em;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
@@ -40,10 +43,11 @@
                                         {{ form.password }}
                                     </div>
                                     <!-- <br> -->
+                                    <input type="hidden" name="next" value="{{ request.GET.next }}">
                                     <button type="submit" class="btn btn-sm btn-primary w-100" 
                                     style="border-radius: 7px; font-size: 14px;">Sign in</button>                                
                                 </form>
-                                <a href="#" class="btn btn-link btn-lg w-100">Forgot your password?</a>
+                                <a href="{% url 'account:password_reset' %}" class="btn btn-link btn-lg w-100">Forgot your password?</a>
                             </div>
                         </div>                    
                     </div>

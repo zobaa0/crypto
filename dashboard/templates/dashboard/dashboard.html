@@ -14,7 +14,7 @@
     <!-- MAIN CONTENT -->
     {% block content %}
         <!-- Summary -->
-        <section class="dashb px-lg-5 px-3 py-3">
+        <section class="dashb px-lg-5 px-3 py-3" style="padding-bottom: 100px !important;">
             <div class="row">
                 <!-- LEFT COLUMN -->
                 <div class="col-xl-3 col-md-4">
@@ -110,9 +110,9 @@
                                         <img src="{% static 'img/icons/account2.png' %}" alt="">
                                     </div>
                                     <div class="px-5 act-ctn-body">
-                                        <h6>total deposit</h6>
+                                        <h6>active deposit</h6>
                                         <p>
-                                            ${{ tot_deposit|default:0.00 }}
+                                            ${{ active_deposit|default:0.00 }}
                                         </p>
                                     </div>
                                 </div>
@@ -126,9 +126,9 @@
                                         </li>
                                         <hr style="color: darkgrey;">
                                         <li class="py-2">
-                                            Pending Deposit:
+                                            Total Deposit:
                                             <span style="float: right;">                               
-                                                ${{ pend_deposit|default:0.00 }}
+                                                ${{ tot_deposit|default:0.00 }}
                                             </span>
                                         </li>
                                     </ul>

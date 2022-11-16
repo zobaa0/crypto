@@ -40,7 +40,8 @@ class AddressInfo(forms.ModelForm):
                               },
                               widget=forms.Select(choices=UserModel.COUNTRIES, attrs={
                                 'class': 'form-select form-select-md',
-                                'id': 'country'
+                                'id': 'country',
+                                'style': 'color: #000;'
                              }))
     phone = forms.CharField(max_length=20, required=True,
                             error_messages={
@@ -51,7 +52,7 @@ class AddressInfo(forms.ModelForm):
                                 'id': 'phone_no',
                                 'placeholder': '+1 (256)...'
                             }))
-    address = forms.CharField(max_length=30, required=True,
+    address = forms.CharField(max_length=60, required=True,
                               error_messages={
                                 'required': 'Address field cannot be empty'
                               },
@@ -127,13 +128,13 @@ class WalletForm(forms.ModelForm):
         model = Wallet
         exclude = ['user']
 
-    # def full_clean(self):
-    #     """Validate unique constraints"""
-    #     super(WalletForm, self).full_clean()
-    #     try:
-    #         self.instance.validate_unique()
-    #     except:
-    #         self.add_error('address', 'Wallet address with this name already exists.')
+    def full_clean(self):
+        """Validate unique constraints (user, type)"""
+        super(WalletForm, self).full_clean()
+        try:
+            self.instance.validate_unique()
+        except:
+            self.add_error('address', 'Wallet address with this name already exists.')
 
 
 class WithdrawalForm(forms.ModelForm):

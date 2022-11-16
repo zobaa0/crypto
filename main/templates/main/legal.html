@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+    {% load static %}
+
+    {% block title %}
+    Xendcoin - Legal information
+    {% endblock title %}
+
+    {% block content %}
+        <section class="privacy px-lg-5 px-1" style="padding-top: 10em;">
+            <div class="container">
+                <h1 class="text-center text-light mb-lg-5 mb-3">
+                    <span style="color: rgb(10, 223, 165);">Legal </span>Information
+                </h1>
+                <div class="row">
+                    <div class="col-lg-7 px-lg-3">
+                        <p style="text-align: justify;">
+                            Xandcoin is one of the most reliable diversified financial investment service provider in the world.
+                            Our fundamental mission is to help customers and clients achieve their financial objectives. With offices 
+                            in United States and our headquarters in England, Xandcoin have active staffs with over 25 years of experience
+                            in managing finances and a strong knowledge of the crypto space. We are committed to pushing the boundaries of
+                            what constitutes the highest standards in trade and asset management.
+                        </p>
+                        <p style="text-align: justify;">
+                            Today, as a successful trade investment and asset management company, we are trusted by thousands of clients.
+                            Our sterling reputation, dedication to meeting our clients' needs and innovative approach to business development
+                            are some driving forces behind our success. Xandcoin has one of the world's largest independent traders and fund 
+                            managers with clients from different parts of the world.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 px-2 px-lg-5">
+                        <!-- <p><b>Legal Certificate</b></p> -->
+                        <img src="{% static 'img/xandcoin-cert.jpg' %}" alt="" style="height: 90%; width: 100%; border-radius: 5px;">
+                        <a class="btn btn-sm btn-primary w-100 mt-2" style="border-radius: 5px; font-size: 14px;"
+                        href="{% static 'img/xandcoin-cert.jpg' %}">
+                            Download Certificate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}

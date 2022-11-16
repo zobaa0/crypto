@@ -1,8 +1,13 @@
 {% extends 'main/base.html' %}
 {% load static %}
+
+{% block title %}
+    Xendcoin - Home
+{% endblock title %}
+
 {% block content %}
 <!-- HERO SECTION -->
-<section class="hero px-lg-5 px-1" style="padding-top: 5em;">
+<section class="hero px-lg-5 px-1" style="padding-top: 10em; height: 100vh;">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -10,14 +15,14 @@
                  font-size: 4rem; line-height: 1;">
                     Investments <br>that make your <br><span style="color: rgb(10, 223, 165);">fortune grow</span>
                 </h1>
-                <p style="font-size: 19px; letter-spacing: .5px;" class="pt-3">
+                <p style="font-size: 16px; letter-spacing: .5px;" class="pt-3">
                     We guarantee your income with a high percentage by providing economic advice to large companies
                     and investing in large volumes in the financial markets with a profitability of 96%, based on
                     the intelligent methods and algorithms designed by the company itself in a completely exclusive 
                     manner.
                 </p>
                 <div class="h1 rotateIn wow">
-                    <a href="" class="btn text-light btn-primary" style="font-size: 18px;">GET STARTED</a>
+                    <a href="" class="btn text-light btn-primary" style="font-size: 15px;">GET STARTED</a>
                 </div>
             </div>
             <div class="col-md-6 d-none d-md-block">
@@ -32,7 +37,7 @@
 </section>
 
 <!-- FEATURES SECTION -->
-<section class="features px-lg-5 px-1" style="padding-top: 5em;">
+<section class="features px-lg-5 px-1" style="padding-top: 0;">
     <div class="container">
         <h1 class="text-center">Feature<span style="color: rgb(10, 223, 165);">s</span></h1>
         <div class="row pt-3 ">
@@ -224,7 +229,7 @@
                         <p class="btn btn-sm btn-primary" style="margin-bottom: 60px; padding: 2px 20px; color: white; cursor: auto;">Investment</p>
                         <p>
                             <span style="font-size: 60px; position: absolute; top: 1.5em; left: 0; padding-left: 25px; color: rgb(39, 179, 252)">
-                                20<b style="font-size: 30px;"><sup>%</sup></b></span>
+                                3<b style="font-size: 30px;"><sup>%</sup></b></span>
                             <span style="position: absolute; right: 0; padding-right: 25px; top: 8.5em; color: grey;">
                                 <em>DAILY</em></span>
                         </p>
@@ -237,7 +242,7 @@
                             </li>
                             <li class="px-4">
                                 <span style="font-weight: 700;">Daily Yield</span>
-                                <span style="float: right;"><b>20%</b></span>
+                                <span style="float: right;"><b>3%</b></span>
                             </li>
                             <li class="px-4">
                                 <span style="font-weight: 700;">Min</span>
@@ -262,7 +267,7 @@
                         <p class="btn btn-sm btn-primary" style="margin-bottom: 60px; padding: 2px 20px; color: white; cursor: auto;">Investment</p>
                         <p>
                             <span style="font-size: 60px; position: absolute; top: 1.5em; left: 0; padding-left: 25px; color: rgb(39, 179, 252)">
-                                40<b style="font-size: 30px;"><sup>%</sup></b></span>
+                                6<b style="font-size: 30px;"><sup>%</sup></b></span>
                             <span style="position: absolute; right: 0; padding-right: 25px; top: 8.5em; color: grey;">
                                 <em>DAILY</em></span>
                         </p>
@@ -271,11 +276,11 @@
                         <ul class="list-unstyled text-left py-3 pb-2" style="display: flex; flex-direction:column;">
                             <li class="px-4">
                                 <span style="font-weight: 700;">Term</span>
-                                <span style="float: right;"><b>4 Days</b></span>
+                                <span style="float: right;"><b>2 Days</b></span>
                             </li>
                             <li class="px-4">
                                 <span style="font-weight: 700;">Daily Yield</span>
-                                <span style="float: right;"><b>40%</b></span>
+                                <span style="float: right;"><b>6%</b></span>
                             </li>
                             <li class="px-4">
                                 <span style="font-weight: 700;">Min</span>
@@ -300,7 +305,7 @@
                         <p class="btn btn-sm btn-primary" style="margin-bottom: 60px; padding: 2px 20px; color: white; cursor: auto;">Investment</p>
                         <p>
                             <span style="font-size: 60px; position: absolute; top: 1.5em; left: 0; padding-left: 25px; color: rgb(39, 179, 252)">
-                                68<b style="font-size: 30px;"><sup>%</sup></b></span>
+                                10<b style="font-size: 30px;"><sup>%</sup></b></span>
                             <span style="position: absolute; right: 0; padding-right: 25px; top: 8.5em; color: grey;">
                                 <em>DAILY</em></span>
                         </p>
@@ -309,11 +314,11 @@
                         <ul class="list-unstyled text-left py-3 pb-2" style="display: flex; flex-direction:column;">
                             <li class="px-4">
                                 <span style="font-weight: 700;">Term</span>
-                                <span style="float: right;"><b>6 Days</b></span>
+                                <span style="float: right;"><b>2 Days</b></span>
                             </li>
                             <li class="px-4">
                                 <span style="font-weight: 700;">Daily Yield</span>
-                                <span style="float: right;"><b>68%</b></span>
+                                <span style="float: right;"><b>10%</b></span>
                             </li>
                             <li class="px-4">
                                 <span style="font-weight: 700;">Min</span>
@@ -559,10 +564,11 @@
 <!-- STATISTICS -->
 <section class="statistics px-lg-5 px-1" style="padding-top: 5em;">
     <div class="container">
-        <h1 class="text-center">Rain Check</h1>
+        <!-- <h1 class="text-center">Rain Check</h1> -->
         <div class="row">
             <!-- First -->
-            <div class="col-lg-6">
+            <div class="col-lg-6 chart" style="height: 340px;">
+                <h2 class="text-center text-light pb-2">Live <span style="color: rgb(10, 223, 165);">Chart</span></h2>
                 <iframe class="w-100 h-100" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_296ad&symbol=NASDAQ%3AAAPL&interval
                 =5&symboledit=1&saveimage=1&toolbarbg=f1f3f6&studies=%5B%5D&theme=light&style=1&timezone=Etc%2FUTC&studies_overrides
                 =%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=bimaxcoin.com&utm_medi
@@ -570,7 +576,7 @@
             </div>
 
             <!-- Second -->
-            <div class="col-lg-6 shake wow">
+            <div class="col-lg-6 shake wow mt-4 mt-sm-0">
                 <h2 class="text-center text-light pb-2">Stastist<span style="color: rgb(10, 223, 165);">ics</span></h2>
                 <div class="row">
                     <div class="col-md-6" id="stats-container">
@@ -618,25 +624,73 @@
 
 <!-- TRANSACTIONS -->
 <section class="transactions px-lg-5 px-1" style="padding-top: 5em;">
-    <div class="container bg-light" style="height: 500px;">
-        <div class="row pb-3">
-            <div class="col-md-6">
-                <!-- <h3 class="text-center bg-dark">RECENT DEPOSITS</h3> -->
-                
-                {% for i in sub %}
-                    <ul class="d-flex">
-                        <li class="text-dark" style="padding-right: 5em;">{{ i.user.username }}</li>
-                        <li class="text-dark">{{ i.sub_amount }}</li>
-                    </ul>
-                {% endfor %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-1 recent-right">
+                <h2 class="text-center text-light pb-2">Recent <span style="color: rgb(10, 223, 165);">Deposits</span></h2>
+                <div class="stat-cont text-light card-hover" style="box-shadow: 0 .5px 1px 0 white; background: antiquewhite;">
+                    <div class="stats-item px-2 pt-0 ml-6 mb-3 pb-1" style="box-shadow: 0 3px 10px 0 rgb(5, 33, 148)">
+                        <ul class="d-flex justify-content-between list-unstyled" style="position: relative;">
+                            <div id="name">
+                                <p class="bg-dark text-light mb-2 px-3 py-1 dep-name w-100">NAME
+                                    <span style="float: right;">AMOUNT</span>
+                                </p>
+                                <div id="sub-name" class="mt-5">
+                                    {% for i in sub %}
+                                        <li class="text-dark name" style="font-weight: bold; padding-left: 20px;">
+                                            {{ i.user.username|title }}
+                                        </li>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div id="amount">
+                                <div id="sub-amount" class="mt-5">
+                                    {% for i in sub %}
+                                        <li class="text-dark name" style="font-weight: bold; padding-right: 20px;">
+                                            ${{ i.sub_amount }}
+                                        </li>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
                     
             </div>
-            <div class="col-md-6">
-                <h3 class="text-center bg-dark">RECENT WITHDRAWALS</h3>
+            <div class="col-md-5 mt-4 mt-sm-0 recent-left">
+                <h2 class="text-center text-light pb-2">Recent <span style="color: rgb(10, 223, 165);">Withdrawals</span></h2>
+                <div class="stat-cont text-light card-hover" style="box-shadow: 0 .5px 1px 0 white; background: antiquewhite;">
+                    <div class="stats-item px-2 pt-0 ml-6 mb-3 pb-1" style="box-shadow: 0 3px 10px 0 rgb(5, 33, 148)">
+                        <ul class="d-flex justify-content-between list-unstyled" style="position: relative;">
+                            <div id="name">
+                                <p class="bg-dark text-light mb-2 px-3 py-1 dep-name w-100">NAME
+                                    <span style="float: right;">AMOUNT</span>
+                                </p>
+                                <div id="withdraw-name" class="mt-5">
+                                    {% for i in withdraw %}
+                                        <li class="text-dark name" style="font-weight: bold; padding-left: 20px;">
+                                            {{ i.user.username|title }}
+                                        </li>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div id="amount">
+                                <div id="withdraw-amount" class="mt-5">
+                                    {% for i in withdraw %}
+                                        <li class="text-dark name" style="font-weight: bold; padding-right: 20px;">
+                                            ${{ i.amount }}
+                                        </li>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <style>
     .hero {
@@ -653,113 +707,6 @@
         background-position: left center;
     }
 </style>
-
-<script type="text/javascript">
-    // var a = {{ i.sub }}
-    /*====================*\
-   |   CAROUSEL + SLIDER    |
-    \*====================*/
-    let slideIndex = 1;
-    let myTimer;
-    let slideshowContainer;
-
-    window.addEventListener("load",function() {
-        showSlides(slideIndex);
-        myTimer = setInterval(function(){plusSlides(1)}, 6000);
-        // KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-        slideshowContainer = document.getElementsByClassName('services-inner')[0]; 
-        slideshowContainer.addEventListener('mouseenter', pause)
-        slideshowContainer.addEventListener('mouseleave', resume)
-    })
-
-    // NEXT AND PREVIOUS CONTROL
-    function plusSlides(n){
-        clearInterval(myTimer);
-        if (n < 0){
-            showSlides(slideIndex -= 1);
-        } else {
-        showSlides(slideIndex += 1); 
-        }
-        // KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-        if (n === -1){
-            myTimer = setInterval(function(){plusSlides(n + 2)}, 6000);
-        } else {
-            myTimer = setInterval(function(){plusSlides(n + 1)}, 6000);
-        }
-    }
-
-    // Controls the current slide and resets interval if needed
-    function currentSlide(n){
-        clearInterval(myTimer);
-        myTimer = setInterval(function(){plusSlides(n + 1)}, 6000);
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n){
-        let i;
-        let slides = document.getElementsByClassName("services");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-    // Pause the slider on mouse enter
-    pause = () => {
-        clearInterval(myTimer);
-    }
-    //  Resume the slider on mouse leave
-    resume = () =>{
-        clearInterval(myTimer);
-        myTimer = setInterval(function(){plusSlides(slideIndex)}, 6000);
-    }
-
-    /*====================*\
-   |        STATISTICS      |
-    \*====================*/
-    let section_counter = document.querySelector('#stats-container');
-    let sectionCounter = document.querySelector('#stats-container-1');
-    let counters = document.querySelectorAll('.stats-item .stat');
-    
-    let CounterObserver = new IntersectionObserver(
-        (entries, observer)=>{
-            let [entry] = entries;
-            if (!entry.isIntersecting) return;
-
-            let speed = 500;
-            counters.forEach((counter, index) => {
-                function UpdateCounter() {
-                    const targetNumber = +counter.dataset.target;
-                    const initialNumber = +counter.innerText;
-                    const incPercent = targetNumber / speed;
-                    if (initialNumber < targetNumber) {
-                        counter.innerText = Math.ceil(initialNumber + incPercent);
-                        setTimeout(UpdateCounter, 40);
-                    }
-                }
-                UpdateCounter();
-
-                if (counter.parentElement.style.animation) {
-                    counter.parentElement.style.animation = "";
-                }
-                else {
-                    counter.parentElement.style.animation = `slide-up 0.3s ease forwards 
-                    ${index / counters.length + 0.5}s`;
-                }
-            });
-        },
-        {
-        root:null,
-        threshold: 0.4,
-    });
-
-    CounterObserver.observe(section_counter);
-</script>
-
 {% endblock %}
+
+

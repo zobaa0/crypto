@@ -5,13 +5,20 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>
+        
+            {% block title %}
+                
+            {% endblock title %}
+                
+        </title>
 
         <!-- Theme Style + Bootstrap -->
+        <link rel="shortcut icon" href="{% static 'img/icon-2.png' %}">
         <link rel="stylesheet" media="screen" href="{% static 'css/theme.min.css' %}">
         <link rel="stylesheet" media="screen" href="{% static 'css/boxicons.min.css' %}">
-        <!-- <link rel="stylesheet" media="screen" href="{% static 'css/swiper-bundle.min.css' %}"> -->
         <link rel="stylesheet" media="screen" href="{% static 'css/animate.css' %}">
+        <link rel="stylesheet" media="screen" href="{% static 'css/main.css' %}">
         
 
         <!-- ============================================================== -->
@@ -27,14 +34,16 @@
         <header class="header fixed-top">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a href="#" class="navbar-brand">Unkown</a>
-                        
+                    <a href="{% url 'main:home' %}" class="navbar-brand my-0 py-0">
+                        <img src="{% static 'img/site-logo-1.png' %}" style="height: 50px;"  alt="">
+                        <span style="color: rgba(10, 202, 151, 0.788); font-weight: bold;">Xendcoin</span>
+                    </a>
                     <button class="navbar-toggler" type="button" 
                         data-bs-toggle="collapse" data-bs-target="#navmenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navmenu">
-                        <ul class="navbar-nav ms-auto">
+                        <ul class="navbar-nav ms-auto index">
                             <li class="nav-item">
                                 <a href="{% url 'main:home' %}" class="nav-link text-light">Home</a>
                             </li>
@@ -68,13 +77,13 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item px-2">
-                                <a href="{% url 'account:login' %}" class="nav-link btn text-light btn-primary">
+                            <li class="nav-item mb-4 mb-md-0 mt-1 mt-md-0">
+                                <a href="{% url 'account:login' %}" class="log w-1000 nav-link btn text-light btn-primary">
                                     <i class="bx bx-user fs-lg me-2"> Login</i>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="{% url 'account:register' %}" class="nav-link btn text-light btn-primary">
+                            <li class="nav-item pb-3 pb-md-0 sign-li">
+                                <a href="{% url 'account:register' %}" class="sign nav-link w-100 btn text-light btn-primary">
                                     <i class="bx bx-user fs-lg me-2"> Sign Up</i>
                                 </a>
                             </li>
@@ -82,6 +91,11 @@
                     </div>
                 </div>
             </nav>
+            <div class="px-5">
+                <div class="container d-flex justify-content-center">
+                    <div id="google_translate_element"></div>
+                </div>
+            </div>
             {% include 'main/includes/messaging.html' %}
         </header>
         
@@ -93,25 +107,25 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer pt-5 pb-4 pb-lg-5 px-5 mt-4">
+        <footer class="footer pt-5 pb-4 pb-lg-5 mt-4">
             <div class="container pt-lg-4">
                 <div class="row pb-2">
                     <div class="col-lg-3 col-md-6">
                         <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-                            <img src="" width="47" alt="">
-                            Silicon
+                            <img src="{% static 'img/site-logo-1.png' %}" style="height: 50px;"  alt="">
+                        <span style="color: rgba(10, 202, 151, 0.788);">Xendcoin</span>
                         </div>
                         <p class="fs-sm pb-lg-3 mb-4">
-                            Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. 
-                            Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. 
-                            Arcu tempus, eget elementum dolor ullamcorper sodales.
+                            One of the most reliable and diversified financial investment service provider
+                            in the world. With over $5.3 trillion traded daily in the market, we are 
+                            dedicated to giving our clients their own share of the profit daily.
                         </p>
                     </div>
                     <div class="col-xl-8 col-lg-7 col-md-5 offset-xl-1 offset-md-1 pt-4 pt-md-1 pt-lg-0">
                         <div id="footer-links" class="row">
                             <div class="col-lg-4">
                                 <h6 class="mb-2">
-                                    <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" 
+                                    <a href="#useful-links" class="d-block text-light dropdown-toggle d-lg-none py-2" 
                                     data-bs-toggle="collapse">Useful Links</a>
                                 </h6>
                                 <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
@@ -131,7 +145,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-3">
                                 <h6 class="mb-2">
-                                    <a href="#company" class="d-block text-dark dropdown-toggle d-lg-none py-2" 
+                                    <a href="#company" class="d-block text-light dropdown-toggle d-lg-none py-2" 
                                     data-bs-toggle="collapse">Company</a>
                                 </h6>
                                 <div id="company" class="collapse d-lg-block" data-bs-parent="#footer-links">
@@ -142,8 +156,8 @@
                                             class="nav-link text-light d-inline-block px-0 pt-1 pb-2">Terms of Service</a></li>
                                         <li class="nav-item"><a href="{% url 'main:privacy' %}" 
                                             class="nav-link text-light d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
-                                        <li class="nav-item"><a href="{% url 'main:refund' %}" 
-                                            class="nav-link text-light d-inline-block px-0 pt-1 pb-2">Refund Policy</a></li>
+                                        <li class="nav-item"><a href="{% url 'main:legal' %}" 
+                                            class="nav-link text-light d-inline-block px-0 pt-1 pb-2">Legal Info</a></li>
                                         <li class="nav-item"><a href="{% url 'main:contact' %}" 
                                             class="nav-link text-light d-inline-block px-0 pt-1 pb-2">Contact Us</a></li>
                                     </ul>
@@ -186,293 +200,22 @@
             <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
         </a> -->
 
-        <style>
-            /* .container {
-                margin: 0 4rem;
-                margin-left: 5rem;
-                margin-right: 5rem;
-            } */
-            body {
-                background-color: rgb(0, 22, 97);
-                color: rgb(255, 255, 255);
-                font-weight: 500;
-                overflow-x: hidden;
-            }
-
-            .navbar-toggler-icon,
-            .navbar-toggler-icon::before,
-            .navbar-toggler-icon::after {
-                background: linear-gradient(to right, rgb(38, 170, 249) 
-                    0%, rgb(7, 229, 157) 100%);
-            }
-
-            h1,
-            h2,
-            h3 {
-                color: rgb(255, 255, 255);
-            }
-
-            .btn-primary {
-                background: linear-gradient(to right, rgb(38, 170, 249) 
-                    0%, rgb(7, 229, 157) 100%); 
-                color: rgb(255, 255, 255);
-                border-radius: 25px;
-                border: 1px solid rgb(19, 206, 193);
-            }
-            .btn-primary:hover {
-                /* outline: none; */
-                border: 1px solid rgb(7, 229, 157);
-            }
-
-            .btn-outline-primary {
-                border: 2px solid rgb(10, 223, 165);
-                color: rgb(10, 223, 165);
-                border-radius: 25px;
-            }
-
-            .invest:hover {
-                background: linear-gradient(to right, rgb(38, 170, 249) 
-                    0%, rgb(7, 229, 157) 100%);
-                color: rgb(255, 255, 255);
-                border: 0;
-            }
-
-            .card-invest {
-                box-shadow: 1px 1px 12px  rgb(10, 223, 165);
-                border: none;
-            }
-
-            /* header {
-                background: url("{% static 'img/bg-top.jpg' %}");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: left center;
-            } */
-            header {
-                background-color: rgb(0, 22, 97);
-                /* background-color: rgb(1, 21, 74); */
-                /* border-bottom: 1px solid rgb(5, 33, 148); */
-            }
-
-            /**************\
-                FEATURES
-            \**************/
-            .features {
-                background: url('{% static "img/svg/plans-bg.png" %}');
-            }
-
-            .feature-card-img {
-                background: linear-gradient(to right, 
-                    rgb(38, 170, 249) 0%, rgb(7, 229, 157) 100%);
-                width: 40px;
-                padding-bottom: 3px;
-            }
-
-            .feature-card-body {
-                background: rgb(0, 22, 97);
-                outline: 0; 
-            }
-
-            .feature-card {
-                border: 0;
-            }
-
-            .feature-card-title {
-                padding-top: 15px; line-height: 1;
-            }
-
-            /**************\
-              PROFIT CALC
-            \**************/
-            .profit-check {
-                -ms-overflow-style: none;
-            }
-
-            .profit-check::-webkit-scrollbar {
-                display: none;
-            }
-
-            .table {
-                --si-table-th-color: rgb(255, 255, 255);
-                --si-table-hover-bg: "";
-                margin-bottom: 0;
-                border: 0;
-                border-color: rgb(0, 22, 97);
-                --si-table-border-color: '';
-                /* color: ''; */
-            }
-            
-            .table>:not(caption)>*>* {
-                border-bottom-width: 0;
-                padding: 5px 5px;
-            }
-
-            input {
-                outline: 0;
-            }
-
-            input.profit-data {
-                background-color: rgb(39, 179, 252);
-                color: rgb(255, 255, 255);
-                font-weight: 700;
-                letter-spacing: 2px;
-            }
-
-            select {
-                width: 62% !important;
-                /* beautiful-color: #6366f1; */
-            }
-
-            /**************\
-              MISSION STA
-            \**************/
-            .nav-tabs-alt {
-                --si-nav-tabs-alt-border-width: 0;
-                --si-nav-tabs-alt-link-active-border-color: '';
-            }
-
-            .abt-img .nav {
-                --si-nav-link-color: rgb(255, 255, 255);
-                --si-nav-link-active-color: rgb(10, 223, 165);
-                --si-nav-link-hover-color: rgb(255, 255, 255);
-            }
-
-            /**************\
-                SERVICES
-            \**************/
-            .services-container {
-                position: relative;
-            }
-
-            .services {
-                display: none;
-            }
-
-            .btn-prev,
-            .btn-next {
-                --si-carousel-nav-btn-hover-bg: rgb(10, 223, 165);
-            }
-
-            .prev,
-            .next {
-                position: absolute;
-                top: 0;
-                margin-top: 30%;
-                transition: .6s ease;
-            }
-
-            .next {
-                left: 85%;
-            }
-            
-            .prev {
-                left: 4.8%;
-            }
-
-            .services-dot {
-                display: flex;
-                position: absolute;
-                bottom: 0;
-                left: 45%;
-                padding-bottom: 10px;
-            }
-
-            .services .img-fluid {
-                border-radius: 5px;
-                /* height: 365px; */
-            }
-
-            .dot {
-                cursor: pointer;
-                padding-top: 0;
-                height: 10px;
-                width: 10px;
-                border-radius: 50%;
-                margin: 0 5px;
-                background-color: rgb(255, 225, 255);
-                transition: background-color .6s ease;
-            }
-
-            .dot.active {
-                background-color: rgb(7, 229, 157);
-                width: 25px;
-            }
-
-            .dot:hover {
-                background-color: rgb(7, 229, 157);
-            }
-
-            .services-text {
-                position: absolute;
-                bottom: 0;
-                background: linear-gradient(to right, 
-                rgb(0, 22, 97) 0%, rgb(7, 229, 157) 100%);
-                padding: 2px 20px;
-                font-weight: 800;
-                line-height: 2;
-                letter-spacing: 1px;
-                border-top-right-radius: 50px;
-            }
-            /* .services-btn a {
-                position: absolute;
-                bottom: 0;
-            } */
-            .services-btn .btn-primary {
-                background: linear-gradient(to right, 
-                rgb(0, 22, 97) 0%, rgb(7, 229, 157) 100%);
-                outline: 0;
-                font-size: .9rem;
-                border: 0;
-                padding-left: 2.5em;
-                padding-right: 2.5em;
-                /* border-bottom-right-radius: 10em;
-                border-top-right-radius: 0; */
-            }
-
-            /**************\
-               STATISTICS
-            \**************/
-            .stat {
-                /* font-size: 50px; */
-                color: transparent !important;
-                letter-spacing: 0.2rem;
-                -webkit-text-stroke-width: 0.10rem;
-                -moz-text-stroke-width: 0.10rem;
-                -ms-text-stroke-width: 0.10rem;
-                -o-text-stroke-width: 0.10rem;
-                -webkit-text-stroke-color: white;
-                -moz-text-stroke-color: white;
-                -ms-text-stroke-color: white;
-                -o-text-stroke-color: white;
-            }
-
-            /* INPUTS */
-            input {
-                color: #30333c !important;
-                font-weight: 600 !important;
-            }
-
-            /* LARGE SCREENS */
-            @media (min-width: 991px) {
-                .login {
-                    padding-top: 8em !important;
-                }
-                .register {
-                    padding-top: 6em !important;
-                }
-            }
-        </style>
 
         
         <!-- Vendor Scripts -->
         <script src="{% static 'js/theme.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
         <script src="{% static 'js/vanilla-tilt.min.js' %}"></script>
-        <script src="{% static 'js/wow.min.js' %}"></script>
+        <!-- <script src="{% static 'js/wow.min.js' %}"></script> -->
         <script src="{% static 'js/jquery.min.js' %}"></script>
         <script src="{% static 'js/main.js' %}"></script>
         <script src="{% static 'js/smooth-scroll.polyfills.min.js' %}"></script>
-        <!-- <script src="{% static 'js/swiper-bundle.min.js' %}"></script> -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
     </body>
 </html>

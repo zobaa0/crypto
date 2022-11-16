@@ -44,8 +44,8 @@ class ContactForm(forms.Form):
         message = f'{name.capitalize()} with email {email} just sent you a mail.\n'
         message += f"\nSubject: '{subject}'\n\n"
         message += cl_data.get('message')
-        message += f'\n\n\nbeeLabbs ContactUs Page'
-        message += f"\nbeeLabbs.com"
+        message += f'\n\n\nXendcoin ContactUs Page'
+        message += f"\nxendcoin.com"
         # Return composed mail data
         return subject, message
 
@@ -56,7 +56,7 @@ class ContactForm(forms.Form):
                 subject=subject,
                 message=message,
                 from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[settings.EMAIL_HOST_USER]
+                recipient_list=['okonkwogodspower@yahoo.com'],
             )
         except BadHeaderError:
             return HttpResponse('Invalid header found.')

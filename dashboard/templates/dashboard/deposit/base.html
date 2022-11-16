@@ -13,29 +13,53 @@
     
     <!-- MAIN CONTENT -->
     {% block content %}
-        <section class="summary px-lg-5 px-3 py-3">
+        <section class="summary px-lg-5 px-3 py-4">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="card bg-transparent">
                         <div class="card-body">
-                            <h1 class="text-center">Hello {% block name %} {% endblock %}</h1>
+                            <h1 class="text-center">Hi {% block name %} {% endblock %}!</h1>
                             <p>
                                 You initiated a deposit request. Kindly make a deposit of 
-                                <span style="color: green;"> <b>${% block amount %}{% endblock %}
+                                <span style="color: rgb(39, 179, 252);"> <b>${% block amount %}{% endblock %}
                                 </b> </span> to the Company's Address below.
                             </p>
                             <p></p>
-                            <input type="text" class="form-control form-control-sm">
-                            <small>This address accepts only {% block currency %}{% endblock %}</small>
+                            <div style="display: flex;" class="dep-wal">
+                                <input type="text" class="form-control form-control-sm" value="{% block value %}{% endblock %}" readonly>
+                                <button class="btn-sm btn btn-primary">Copy</button>
+                            </div>
+                            <!-- <textarea name="" id="" cols="" class="w-100" rows=""></textarea> -->
+                            <small>This address accepts only <b>{% block currency %}{% endblock %}</b></small>
                             <p></p>
-                            <p>Your chosen plan is: {% block plan %}{% endblock %}</p>
-                            <p>Your account will be automatically credited once your payment is verified on the BlockChain network</p>
+                            <p>Your chosen plan is: <b>{% block plan %}{% endblock %}</b></p>
+                            <p>Your account will be automatically activated once your payment is verified on the BlockChain network.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        
+        <style>
+            footer {display: none;}
+
+            .dep-wal input {
+                background: lightslategrey;
+                color: #000 !important;
+                letter-spacing: 0.5px;
+                border: 0;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .dep-wal input:focus {
+                background: lightslategrey;
+            }
+
+            .dep-wal .btn-primary {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        </style>
     {% endblock content %}
         

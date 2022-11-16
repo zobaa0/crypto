@@ -14,7 +14,7 @@
     <!-- MAIN CONTENT -->
     {% block content %}
         <!-- TRANSACTIONS -->
-        <section class="summary px-lg-5 px-3 py-3">
+        <section class="summary px-lg-5 px-3 py-3" style="padding-bottom: 60px !important;">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <p><strong style="color:rgb(10, 223, 165); font-size: 18px;">
@@ -29,7 +29,7 @@
                     <!-- Dark table with striped rows -->
                     <div class="table-responsive">
                         <table class="table table-dark table-striped">
-                            <thead>
+                            <thead class="tot-head">
                                 <tr>
                                 <th>S/N</th>
                                 <th>Referral</th>
@@ -38,17 +38,17 @@
                             </thead>
                             <tbody>
                                 {% if not referrals %}
-                                    <tr>
+                                    <tr class="tot-row">
                                         <td><em>No data to display at the moment.</em></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
                                 {% else %}
                                     {% for i in referrals %}
-                                        <tr>
-                                            <td>{{ forloop.counter }}.</td>
-                                            <td>{{ i.user|title }}</td>
-                                            <td>${{ i.bonus }}</td>
+                                        <tr class="tot-row">
+                                            <td class="text-light">{{ forloop.counter }}.</td>
+                                            <td class="text-light">{{ i.user|title }}</td>
+                                            <td class="text-light">${{ i.bonus }}</td>
                                         </tr>
                                     {% endfor %}
                                 {% endif %}
@@ -64,13 +64,4 @@
             </div>           
         </section>
 
-        <style>
-            .table-striped>tbody>tr:nth-of-type(odd)>* {
-                color: '';
-            }
-            .table-dark {
-                --si-table-striped-bg: #30333c;
-            }
-        </style>
-    {% endblock content %}
-        
+    {% endblock content %}        

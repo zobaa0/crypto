@@ -14,10 +14,10 @@
     </title>
 
     <!-- Theme Style + Bootstrap -->
+    <link rel="shortcut icon" href="{% static 'img/icon-1.ico' %}">
     <link rel="stylesheet" media="screen" href="{% static 'css/theme.min.css' %}">
+    <link rel="stylesheet" media="screen" href="{% static 'css/dashboard.css' %}">
     <link rel="stylesheet" media="screen" href="{% static 'css/boxicons.min.css' %}">
-    <link rel="stylesheet" media="screen" href="{% static 'css/swiper-bundle.min.css' %}">
-    <link rel="stylesheet" media="screen" href="{% static 'css/animate.css' %}">
     
 
     <!-- ============================================================== -->
@@ -31,7 +31,10 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container d-flex justify-content-between">
-                <a href="{% url 'main:home' %}" class="navbar-brand">Unkown</a>
+                <a href="{% url 'main:home' %}" class="navbar-brand my-0 py-0">
+                    <img src="{% static 'img/site-logo-1.png' %}" style="height: 50px;"  alt="">
+                    <span style="color: rgba(10, 202, 151, 0.788);">Xendcoin</span>
+                </a>
                     
                 <ul class="navbar-nav ">
                     <li class="nav-item">
@@ -44,7 +47,7 @@
         </nav>
     </header>
 
-    <main class="page-wrapper">
+    <main class="page-wrapper mb-5" style="padding-bottom: 40px !important;">
         <!-- Main Nav -->
         <section class="px-lg-5 px-0" style="padding-top: 1em; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.664);">
             <nav class="navbar navbar-expand-lg justify-content-center">
@@ -56,17 +59,17 @@
 
                 <div class="collapse navbar-collapse" id="navmenu">
                     <ul class="navbar-nav mx-auto main-nav justify-content-center" style="flex-wrap: wrap;">
-                        <li class="nav-item active">
-                            <a href="{% url 'dashboard:dashboard' %}" class="nav-link text-light">Dashboard</a>
+                        <li class="nav-item">
+                            <a href="{% url 'dashboard:dashboard' %}" class="nav-link text-light main">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'dashboard:deposit' %}" class="nav-link text-light">Deposit</a>
+                            <a href="{% url 'dashboard:deposit' %}" class="nav-link text-light main">Deposit</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'dashboard:withdraw' %}" class="nav-link text-light">Withdraw</a>
+                            <a href="{% url 'dashboard:withdraw' %}" class="nav-link text-light main">Withdraw</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle text-light" 
+                            <a href="#" class="nav-link dropdown-toggle text-light main" 
                             data-bs-toggle="dropdown" role="button" aria-haspopup="true" 
                             aria-expanded="false">Transactions</a>
                             <ul class="dropdown-menu text-light" style="background: rgb(1, 1, 36); border: 0;">
@@ -82,10 +85,10 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'dashboard:referral' %}" class="nav-link text-light">Referrals</a>
+                            <a href="{% url 'dashboard:referral' %}" class="nav-link text-light main">Referrals</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'dashboard:profile' %}" class="nav-link text-light">Profile</a>
+                            <a href="{% url 'dashboard:profile' %}" class="nav-link text-light main">Profile</a>
                         </li>
                     </ul>
                 </div>
@@ -116,7 +119,7 @@
                         <p style="padding-right: 20px;">HOME</p>
                         <P>
                             <i class="bx bx-user"></i>
-                            <span>   
+                            <span style="color: rgb(10, 223, 165);">   
                                 {% block heading %}
                                     
                                 {% endblock heading %}
@@ -133,7 +136,7 @@
                         
                         <div>
                             <p class="pb-2 px-4 pt-2" style="color: rgb(39, 179, 252);">
-                                <span style="padding-right: 5px;">https://www.beeLabbs.com/signup/{{ request.user.referral.code }}</span>
+                                <span style="padding-right: 5px;">http://18.168.249.187/signup/{{ request.user.referral.code }}</span>
                                 <span class="btn btn-sm btn-primary" style="padding:0 20px; height: 30px;">Copy</span>
                             </p>
                         </div>
@@ -142,151 +145,71 @@
                 </div>
             </div>
         </section>
-
         
         {% block content %}
             
-        {% endblock content %}
-            
-        
+        {% endblock content %}    
     </main>
 
-    <footer class="px-5 py-3">
+    <footer class="py-2 fixed-bottom">
         <section class="container">
-            <div class="d-flex justify-content-between">
-                <div>Trial</div>
-                <div>Test</div>
-                <div>Done</div>
+            <div class="currencies d-flex justify-content-between">
+                <div class="currency px-2">
+                    <img src="{% static 'img/icons/bitcoin.png' %}" class="coin" alt="btc">
+                    <span class="coin">bitcoin</span>
+                    <span class="price bitCoin"></span>
+                </div>
+                <div class="currency px-2">
+                    <img src="{% static 'img/icons/ethereum.png' %}" alt="btc" style="padding-right: 10px;">
+                    <span class="coin">ethereum</span>
+                    <span class="price ethCoin"></span>
+                </div>
+                <div class="currency px-2">
+                    <img src="{% static 'img/icons/litecoin.png' %}" alt="btc" style="padding-right: 10px;">
+                    <span class="coin">litecoin</span>
+                    <span class="price ltcCoin"></span>
+                </div>
+                <div class="currency px-2">
+                    <img src="{% static 'img/icons/dogecoin.png' %}" alt="btc" style="padding-right: 10px;">
+                    <span class="coin">dogecoin</span>
+                    <span class="price dogeCoin"></span>
+                </div>
             </div>
         </section>
     </footer>
 
-    <style>
-        .affiliate-link {
-            background: linear-gradient(to left, grey -10%, rgb(0, 0, 0) 100%);
-            border-radius: 10px;
-        }
-        body {
-            background-color: rgb(0, 22, 97);
-            color: rgb(255, 255, 255);
-            font-weight: 500;
-            font-size: 14px;
-            overflow-x: hidden;
-        }
-        main {
-            background-color: rgba(0, 0, 0, 0.664);
-            /* padding-top: 90px; */
-            margin: 0 90px;
-            /* margin-top: 67px; */
-        }
-        .main-nav > li {
-            padding-left: 35px;
-            padding-right: 35px;
-        }
-        /* .navbar-toggler-icon {
-            left: 15em;
-        } */
-        
-        a, h1, h2, h3,
-        h4, h5, h6, .h1,
-        .h2, .h3, .h4,
-        .h5, .h6, button {
-            color: rgb(255, 255, 255) !important;
-        }
-        header{
-            /* background-color: rgb(1, 21, 74); */
-            background-color: rgba(0, 0, 0, 0.664);
-            border-bottom: 1px solid grey;
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.664);
-        }
 
-        .btn-primary {
-            background: rgb(47, 100, 143);
-            border: 1px solid rgb(47, 100, 143);
-        }
-
-        .btn-primary:hover,
-        .btn-primary:focus {
-            background: rgb(16, 61, 97) !important;
-            border: 2px solid rgb(16, 61, 97) !important;
-        }
-
-        /*  */
-        .act-ctn-body h6 {
-            text-transform: uppercase; 
-            margin-bottom: 0; 
-            font-weight: 500; 
-            font-size: 14px;
-        }
-        .act-ctn-body p {
-            color: rgb(39, 179, 252); 
-            font-weight: 700; 
-            font-size: 26px;
-        }
-        .act-ctn-1 {
-            background: rgb(51, 50, 50); 
-            border-top-left-radius: 5px; 
-            border-top-right-radius: 5px;
-        }
-        .act-ctn-2 {
-            background: rgb(47, 100, 143); 
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-        .btn-outline-primary {
-            border: 2px solid rgb(1, 1, 41) !important;
-        }
-        .btn-outline-primary:hover,
-        .btn-outline-primary:focus {
-            background: rgb(1, 1, 41) !important;
-            border: 2px solid rgb(1, 1, 41) !important;
-        }
-
-        /*  */
-        .card {
-            border-color: gray;
-        }
-
-        input {
-            color: rgb(51, 50, 50) !important;
-            font-weight: 600 !important;
-        }
-        
-        select {
-            font-weight: 600 !important;
-        }
-
-        input:focus, select:focus {
-            border: 0;
-        }
-
-        .draw button {
-            width: 100%;
-        }
-        
-        option {
-            background: rgb(51, 50, 50);
-            color: aliceblue;
-        }
-
-        
-        @media (max-width: 767px) {
-            main {
-                margin: 0;
-                /* padding-top: 30px; */
-            }
-        }
-    </style>
+    <script type="text/javascript">
+        // Query Binance API to get latest crypto prices
+        const key  = 'https://www.binance.com/api/v3/ticker/price?symbols='
+        const currencies = '%5B%22BTCUSDT%22,%22ETHUSDT%22,%22LTCUSDT%22,%22DOGEUSDT%22%5D'
+        const url = key + currencies
+        // Make the API call request
+        fetch(url)
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            let crypto = data;
+            // Convert the prices to float and round to two d.p
+            let btc = parseFloat(crypto[0].price).toFixed(2);
+            let eth = parseFloat(crypto[1].price).toFixed(2);
+            let ltc = parseFloat(crypto[2].price).toFixed(2);
+            let doge = parseFloat(crypto[3].price).toFixed(4);
+            // Append the prices to the main content
+            document.querySelector('.bitCoin').textContent = '$' + btc;
+            document.querySelector('.ethCoin').textContent = '$' + eth;
+            document.querySelector('.ltcCoin').textContent = '$' + ltc;
+            document.querySelector('.dogeCoin').textContent = '$' + doge;
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    </script>
 
      <!-- Vendor Scripts -->
      <script src="{% static 'js/theme.min.js' %}"></script>
      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-     <script src="{% static 'js/vanilla-tilt.min.js' %}"></script>
-     <script src="{% static 'js/wow.min.js' %}"></script>
-     <script src="{% static 'js/jquery.min.js' %}"></script>
-     <script src="{% static 'js/main.js' %}"></script>
      <script src="{% static 'js/smooth-scroll.polyfills.min.js' %}"></script>
 </body>
 </html>

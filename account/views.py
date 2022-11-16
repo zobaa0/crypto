@@ -1,14 +1,18 @@
+from django.http import BadHeaderError
 from django.shortcuts import render, redirect
-from .forms import NewUserForm, UserLoginForm, PasswordChange
+from .forms import NewUserForm, ResetPasswordForm, UserLoginForm, PasswordChange
 from django.contrib.auth import get_user_model, login, authenticate, update_session_auth_hash
 from django.contrib import messages
 from main.decorators import user_not_authenticated
 from .models import Referral
-from django.db.models import F
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from crypto import settings
 from django.contrib.auth.decorators import login_required 
+from django.db.models.query_utils import Q
+from django.utils.http import urlsafe_base64_encode
+from django.utils.encoding import force_bytes
+from django.contrib.auth.tokens import default_token_generator
 
 userModel = get_user_model()
 
@@ -33,18 +37,18 @@ def register(request, *args, **kwargs):
             context = ({'username': username, 'email': email})
             html_version = './account/mails/new_user_confirm.html'
             html_message = render_to_string(html_version, context)
-            subject = 'Welcome to beeLabbs'
-            message = EmailMessage(subject, html_message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
+            subject = 'Welcome to Xandcoin'
+            message = EmailMessage(subject, html_message, 'settings.EMAIL_HOST_USER', [email])
             message.content_subtype = 'html'
-            message.send()
+            message.send(fail_silently=True)
             # TODO: SEND CONFIRMATION MAIL TO ADMIN
             message1 = EmailMessage(
                 subject = f"New User SignUp Notification",
                 body = f'Hello Admin,\n\n{username.capitalize()} just signed up on your website.\n\nRegards,\nDevTeam',
-                from_email = 'admin@gmail.com',
-                to = ['admin@gmail.com'],
+                from_email = 'settings.EMAIL_HOST_USER',
+                to = ['okonkwogodspower@yahoo.com'],
             )
-            message1.send()
+            message1.send(fail_silently=True)
 
             # LOGIC IF USER REGISTERS VIA A REFERRAL LINK
             if referral_id is not None:
@@ -53,13 +57,13 @@ def register(request, *args, **kwargs):
                 registered_user = userModel.objects.get(id=instance.id)
                 registered_profile = Referral.objects.get(user=registered_user)
                 registered_profile.recommended_by = recommended_by_user.user
-                percent = (referral.bonus_percent / referral.bonus_amount) * referral.bonus_amount
-                referral.bonus = F('bonus') + percent
+                # percent = (referral.bonus_percent / referral.bonus_amount) * referral.bonus_amount
+                # referral.bonus = F('bonus') + percent
                 registered_profile.save()
-                # UPDATE USER'S BALANCE
-                # referral.user.balance = F('balance') + referral.bonus
-                # referral.user.save()
-                referral.save()
+                ### UPDATE USER'S BALANCE
+                ### referral.user.balance = F('balance') + referral.bonus
+                ### referral.user.save()
+                # referral.save()
                 user = authenticate(username=username, password=password)
                 login(request, user)
                 messages.success(request, (f"Account created for <b>{user.username.capitalize()}</b>.\
@@ -82,19 +86,24 @@ def register(request, *args, **kwargs):
 def login_request(request):
     if request.method == "POST":
         form = UserLoginForm(request, data=request.POST)
+        valuenext = request.POST.get('next')
         if form.is_valid():
             user = authenticate(
                 username=form.cleaned_data['username'],
                 password=form.cleaned_data['password'],
             )
-            if user is not None and user.is_active:
+            if user is not None:
                 login(request, user)
                 messages.success(request, (f"Hello <b>{user.username}</b>! You have been logged in."))
-                return redirect('dashboard:dashboard')
+                if valuenext == "":
+                    return redirect('dashboard:dashboard')
+                else:
+                    return redirect(valuenext)
     else:
         form = UserLoginForm()
     context = {
-        'form': form
+        'form': form,
+        # 'valuenext': valuenext
     }
     return render(request, 'account/login.html', context)
 
@@ -113,8 +122,8 @@ def security(request):
             })
             html_version = './account/mails/password_change.html'
             html_message = render_to_string(html_version, context)
-            subject = 'beeLabbs - Password Change Notification'
-            message = EmailMessage(subject, html_message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
+            subject = 'Xandcoin - Password Change Notification'
+            message = EmailMessage(subject, html_message, settings.EMAIL_HOST_USER, [request.user.email])
             message.content_subtype = 'html'
             message.send()
             messages.success(request, _("Your password was successfully updated!"))
@@ -125,3 +134,39 @@ def security(request):
         'form': form
     }
     return render(request, 'account/security.html', context)
+
+
+@user_not_authenticated
+def reset_password(request):
+    if request.method == 'POST':
+        form = ResetPasswordForm(request.POST)
+        if form.is_valid():
+            user_email = form.cleaned_data['email']
+            associated_user = userModel.objects.filter(Q(email=user_email))
+            if associated_user.exists():
+                for user in associated_user:
+                    context = ({
+                        'user': user,
+                        'domain': '18.168.249.187',
+                        'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                        'token':default_token_generator.make_token(user),
+                        "protocol": 'https' if request.is_secure() else 'http',
+                    })
+                    html_version = './account/mails/password_reset.html'
+                    html_message = render_to_string(html_version, context)
+                    subject = 'Xandcoin - Password Reset Requested'
+                    message = EmailMessage(subject, html_message, settings.EMAIL_HOST_USER, [user_email])
+                    message.content_subtype = 'html'
+                try:
+                    message.send()
+                except BadHeaderError:
+                    messages.error(request, ( "Problem sending reset password email, <b>SERVER PROBLEM</b>"))
+                messages.success(request, ('A message with reset password instructions has been sent to the email provided.'))
+            else:
+                messages.success(request, ('A message with reset password instructions has been sent to the email provided.'))
+    else:
+        form = ResetPasswordForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'account/password_reset.html', context)

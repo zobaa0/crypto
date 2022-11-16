@@ -5,8 +5,8 @@ from .forms import ContactForm
 
 # Create your views here.
 def home(request):
-    sub = Subscription.objects.all()
-    withdraw = Withdrawal.objects.all()
+    sub = Subscription.objects.all()[:10]
+    withdraw = Withdrawal.objects.all()[:10]
     context = {
         'sub': sub,
         'withdraw': withdraw
@@ -49,5 +49,5 @@ def services(request):
 def howto(request):
     return render(request, 'main/howto.html')
 
-def refund(request):
-    return render(request, 'main/refund.html')
+def legal(request):
+    return render(request, 'main/legal.html')

@@ -1,339 +1,344 @@
 {% extends 'main/base.html' %}
     {% load static %}
-{% block content %}
-    <section class="faq px-5" style="padding-top: 5em;">
-        <div class="container">
-            <h1 class="text-center text-light mb-lg-5 mb-3">
-                Frequently Asked<span style="color: rgb(10, 223, 165);"> Questions</span>
-            </h1>
-            <div class="row">
-                <div class="col-lg-6 bounceInRight wow">
-                    <!-- Accordion -->
-                    <div class="accordion" id="accordionDefault" >
-                        <!-- Item 1 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseOne" 
-                                aria-expanded="false" aria-controls="collapseOne">What is beeLabbs limited?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseOne" 
-                            aria-labelledby="headingOne" data-bs-parent="#accordionDefault">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    beeLabbs Limited is an international investment company officially registered in United Kingdom. 
-                                    beeLabbs Limited Is the foundation made up of private and public investors providing worldwide 
-                                    Crypto Currencies Exchange Mining and Trading services, escrow and a scalable system of distributed 
-                                    computing. Our powerful computing system is optimized for the issuance of Bitcoin, Ethereum, LiteCoin, 
-                                    Tether and other most common decentralized crypto currencies.
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Item 2 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseTwo" 
-                                aria-expanded="false" aria-controls="collapseTwo">Is your activity legal?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseTwo" 
-                            aria-labelledby="headingTwo" data-bs-parent="#accordionDefault">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    beeLabbs Limited is registered in the United Kingdom as "beeLabbs Limited" with a registration 
-                                    number of <em>#14203520</em> and the legality of our company's activities can be judged by the presence 
-                                    of all registration documents and licenses allowing us to attract private investment.
-                                </div>
-                            </div>
-                        </div>
+    {% block title %}
+    Xendcoin - FAQs
+    {% endblock title %}
 
-                        <!-- Item 3 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseThree" 
-                                aria-expanded="false" aria-controls="collapseTwo">How do you handle user data?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseThree" 
-                            aria-labelledby="headingThree" data-bs-parent="#accordionDefault">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    We have taken all possible measures to protect customers' personal information from getting
-                                    to third parties. We are using the strongest DDoS protection in the industry with 100% up-time
-                                    guarantee. Transferred information from our website is realized and ciphered by Sectigo EVSSL Encryption.
+    {% block content %}
+        <section class="faq px-lg-5 px-1" style="padding-top: 10em;">
+            <div class="container">
+                <h1 class="text-center text-light mb-lg-5 mb-3">
+                    Frequently Asked<span style="color: rgb(10, 223, 165);"> Questions</span>
+                </h1>
+                <div class="row">
+                    <div class="col-lg-6 bounceInRight wow">
+                        <!-- Accordion -->
+                        <div class="accordion" id="accordionDefault" >
+                            <!-- Item 1 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" 
+                                    aria-expanded="false" aria-controls="collapseOne">What is beeLabbs limited?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseOne" 
+                                aria-labelledby="headingOne" data-bs-parent="#accordionDefault">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        beeLabbs Limited is an international investment company officially registered in United Kingdom. 
+                                        beeLabbs Limited Is the foundation made up of private and public investors providing worldwide 
+                                        Crypto Currencies Exchange Mining and Trading services, escrow and a scalable system of distributed 
+                                        computing. Our powerful computing system is optimized for the issuance of Bitcoin, Ethereum, LiteCoin, 
+                                        Tether and other most common decentralized crypto currencies.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Item 4 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseFour" 
-                                aria-expanded="false" aria-controls="collapseFour">How can i create an account?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseFour" 
-                            aria-labelledby="headingFour" data-bs-parent="#accordionDefault">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    The registration process on the website is quite simple. You need to fill out the fields of the 
-                                    registration form, which includes the name and nick-name of the user, his email address and password.
+                            <!-- Item 2 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" 
+                                    aria-expanded="false" aria-controls="collapseTwo">Is your activity legal?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseTwo" 
+                                aria-labelledby="headingTwo" data-bs-parent="#accordionDefault">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        beeLabbs Limited is registered in the United Kingdom as "beeLabbs Limited" with a registration 
+                                        number of <em>#14203520</em> and the legality of our company's activities can be judged by the presence 
+                                        of all registration documents and licenses allowing us to attract private investment.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Item 5 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseFive" 
-                                aria-expanded="false" aria-controls="collapseFive">How can i change my account details?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseFive" 
-                            aria-labelledby="headingFive" data-bs-parent="#accordionDefault">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    After logging in, click on the 'Account' page to edit your details. For security reasons, 
-                                    we do not allow users to change their e-mail after registration. If you would like to 
-                                    change your e-mail, please contact our support and we will gladly assist you with that.
+                            <!-- Item 3 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" 
+                                    aria-expanded="false" aria-controls="collapseTwo">How do you handle user data?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseThree" 
+                                aria-labelledby="headingThree" data-bs-parent="#accordionDefault">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        We have taken all possible measures to protect customers' personal information from getting
+                                        to third parties. We are using the strongest DDoS protection in the industry with 100% up-time
+                                        guarantee. Transferred information from our website is realized and ciphered by Sectigo EVSSL Encryption.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Item 6 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseSix" 
-                                aria-expanded="false" aria-controls="collapseSix">May i open multiple accounts in your program?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseSix" 
-                            aria-labelledby="headingSix" data-bs-parent="#accordionDefault">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    No. If we find that one member has more than one account, the entire funds will be frozen.
+                            <!-- Item 4 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" 
+                                    aria-expanded="false" aria-controls="collapseFour">How can i create an account?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseFour" 
+                                aria-labelledby="headingFour" data-bs-parent="#accordionDefault">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        The registration process on the website is quite simple. You need to fill out the fields of the 
+                                        registration form, which includes the name and nick-name of the user, his email address and password.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 7 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseSeven" 
-                                aria-expanded="false" aria-controls="collapseSeven">How can I invest with beeLabbs Limited?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseSeven" 
-                            aria-labelledby="headingSeven" data-bs-parent="#accordionDefault">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    To make an investment you must first become a member of beeLabbs Limited. 
-                                    Once you are signed up, you can make your first deposit. All deposits must be made 
-                                    through the Members Area. You can login using the member username and password you signed up with.
+
+                            <!-- Item 5 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive" 
+                                    aria-expanded="false" aria-controls="collapseFive">How can i change my account details?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseFive" 
+                                aria-labelledby="headingFive" data-bs-parent="#accordionDefault">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        After logging in, click on the 'Account' page to edit your details. For security reasons, 
+                                        we do not allow users to change their e-mail after registration. If you would like to 
+                                        change your e-mail, please contact our support and we will gladly assist you with that.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 8 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingEight">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseEight" 
-                                aria-expanded="false" aria-controls="collapseEight">What are the available payment methods? <em>#todo</em></button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseEight" 
-                            aria-labelledby="headingEight" data-bs-parent="#accordionDefault">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    This is the first item's accordion body. It is hidden by default, until the 
-                                    collapse plugin adds the appropriate classes that we use to style each element.
+
+                            <!-- Item 6 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSix" 
+                                    aria-expanded="false" aria-controls="collapseSix">May i open multiple accounts in your program?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseSix" 
+                                aria-labelledby="headingSix" data-bs-parent="#accordionDefault">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        No. If we find that one member has more than one account, the entire funds will be frozen.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 7 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSeven" 
+                                    aria-expanded="false" aria-controls="collapseSeven">How can I invest with beeLabbs Limited?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseSeven" 
+                                aria-labelledby="headingSeven" data-bs-parent="#accordionDefault">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        To make an investment you must first become a member of beeLabbs Limited. 
+                                        Once you are signed up, you can make your first deposit. All deposits must be made 
+                                        through the Members Area. You can login using the member username and password you signed up with.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 8 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseEight" 
+                                    aria-expanded="false" aria-controls="collapseEight">What are the available payment methods? <em>#todo</em></button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseEight" 
+                                aria-labelledby="headingEight" data-bs-parent="#accordionDefault">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        This is the first item's accordion body. It is hidden by default, until the 
+                                        collapse plugin adds the appropriate classes that we use to style each element.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 bounceInLeft wow">
-                    <div class="accordion" id="accordionDefault-1" >
-                        <!-- Item 9 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingNine">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseNine" 
-                                aria-expanded="false" aria-controls="collapseNine">What is the minimum & maximum deposit?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseNine" 
-                            aria-labelledby="headingNine" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    The minimum deposit requirement is $80 and there is no maximum amount and deposits limits.
-                                    Also check the min and max amount of the investment plan you are interested in.
+                    <div class="col-lg-6 bounceInLeft wow">
+                        <div class="accordion" id="accordionDefault-1" >
+                            <!-- Item 9 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingNine">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseNine" 
+                                    aria-expanded="false" aria-controls="collapseNine">What is the minimum & maximum deposit?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseNine" 
+                                aria-labelledby="headingNine" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        The minimum deposit requirement is $80 and there is no maximum amount and deposits limits.
+                                        Also check the min and max amount of the investment plan you are interested in.
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 10 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingTen">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseTen" 
-                                aria-expanded="false" aria-controls="collapseTen">What is the minimum & maximum withdrawal?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseTen" 
-                            aria-labelledby="headingTen" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    There is no limit for minimum withdrawal except ERC20. 
-                                    The ERC20 transaction cost is high so the minimum withdrawal from ERC20 is $5.
+                            <!-- Item 10 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingTen">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTen" 
+                                    aria-expanded="false" aria-controls="collapseTen">What is the minimum & maximum withdrawal?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseTen" 
+                                aria-labelledby="headingTen" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        There is no limit for minimum withdrawal except ERC20. 
+                                        The ERC20 transaction cost is high so the minimum withdrawal from ERC20 is $5.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 11 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingEleven">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseEleven" 
-                                aria-expanded="false" aria-controls="collapseEleven">do you charge a transaction fee?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseEleven" 
-                            aria-labelledby="headingEleven" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    No, both deposit and withdrawal of funds are carried out without any fees, except for
-                                    those provided by payment systems. Payment Processors charge some fees for sending or 
-                                    receiving funds, we have no control over that.
+                            <!-- Item 11 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingEleven">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseEleven" 
+                                    aria-expanded="false" aria-controls="collapseEleven">do you charge a transaction fee?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseEleven" 
+                                aria-labelledby="headingEleven" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        No, both deposit and withdrawal of funds are carried out without any fees, except for
+                                        those provided by payment systems. Payment Processors charge some fees for sending or 
+                                        receiving funds, we have no control over that.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 12 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingTwelve">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseTwelve" 
-                                aria-expanded="false" aria-controls="collapseTwelve">Can i reinvest with my accumulated funds?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseTwelve" 
-                            aria-labelledby="headingTwelve" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    Of course. You have the right to dispose of the profits at your own 
-                                    discretion, including reinvesting them in the project. Simply login into your members 
-                                    account and click on 'Deposit' and select the Deposit from Account Balance option.
+                            <!-- Item 12 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingTwelve">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwelve" 
+                                    aria-expanded="false" aria-controls="collapseTwelve">Can i reinvest with my accumulated funds?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseTwelve" 
+                                aria-labelledby="headingTwelve" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        Of course. You have the right to dispose of the profits at your own 
+                                        discretion, including reinvesting them in the project. Simply login into your members 
+                                        account and click on 'Deposit' and select the Deposit from Account Balance option.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 13 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingThirteen">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseThirteen" 
-                                aria-expanded="false" aria-controls="collapseThirteen">
-                                Can i subscribe to more than one investment plan?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseThirteen" 
-                            aria-labelledby="headingThirteen" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    We do not prevent investors from getting unlimited income, 
-                                    so each investor can purchase any number of investment plans. 
-                                    However, all transactions are handled separately.
+                            <!-- Item 13 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingThirteen">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThirteen" 
+                                    aria-expanded="false" aria-controls="collapseThirteen">
+                                    Can i subscribe to more than one investment plan?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseThirteen" 
+                                aria-labelledby="headingThirteen" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        We do not prevent investors from getting unlimited income, 
+                                        so each investor can purchase any number of investment plans. 
+                                        However, all transactions are handled separately.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 18 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingEighteen">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseEighteen" 
-                                aria-expanded="false" aria-controls="collapseEighteen">How do you calculate the interest on my account?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseEighteen" 
-                            aria-labelledby="headingEighteen" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    Depending on each plan. Interest on your beeLabbs Limited account is acquired Daily, 
-                                    Weekly, Bi-Weekly, Monthly and Yearly and credited to your available balance at the end of each day.
+                            <!-- Item 18 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingEighteen">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseEighteen" 
+                                    aria-expanded="false" aria-controls="collapseEighteen">How do you calculate the interest on my account?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseEighteen" 
+                                aria-labelledby="headingEighteen" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        Depending on each plan. Interest on your beeLabbs Limited account is acquired Daily, 
+                                        Weekly, Bi-Weekly, Monthly and Yearly and credited to your available balance at the end of each day.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 15 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingFifteen">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseFifteen" 
-                                aria-expanded="false" aria-controls="collapseFifteen">
-                                How long does it take for my withdrawal to arrive?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseFifteen" 
-                            aria-labelledby="headingFifteen" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    All payments are processed within 12 to 48 business hours.
+                            <!-- Item 15 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingFifteen">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFifteen" 
+                                    aria-expanded="false" aria-controls="collapseFifteen">
+                                    How long does it take for my withdrawal to arrive?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseFifteen" 
+                                aria-labelledby="headingFifteen" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        All payments are processed within 12 to 48 business hours.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 16 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingSixteen">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseSixteen" 
-                                aria-expanded="false" aria-controls="collapseSixteen">Can i refer members without making deposit</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseSixteen" 
-                            aria-labelledby="headingSixteen" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    No, you need to make an initial deposit to take part in our referral program.
+                            <!-- Item 16 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingSixteen">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSixteen" 
+                                    aria-expanded="false" aria-controls="collapseSixteen">Can i refer members without making deposit</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseSixteen" 
+                                aria-labelledby="headingSixteen" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        No, you need to make an initial deposit to take part in our referral program.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 17 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingSeventeen">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" 
-                                aria-expanded="false" aria-controls="collapseSeventeen">
-                                Can i use the affiliate link to create my own account?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseSeventeen" 
-                            aria-labelledby="headingSeventeen" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body" style="font-size: 14px;">
-                                    No, the company's rules prohibit such actions, which are considered by the site 
-                                    administration as fraudulent. If caught, your account will be deactivated without prior notice.
+                            <!-- Item 17 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingSeventeen">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" 
+                                    aria-expanded="false" aria-controls="collapseSeventeen">
+                                    Can i use the affiliate link to create my own account?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseSeventeen" 
+                                aria-labelledby="headingSeventeen" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body" style="font-size: 14px;">
+                                        No, the company's rules prohibit such actions, which are considered by the site 
+                                        administration as fraudulent. If caught, your account will be deactivated without prior notice.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Item 14 -->
-                        <div class="accordion-item mb-3" style="border-radius: 5px;">
-                            <h3 class="accordion-header" id="headingFourteen">
-                                <button class="accordion-button collapsed py-1 " type="button" 
-                                data-bs-toggle="collapse" data-bs-target="#collapseFourteen" 
-                                aria-expanded="false" aria-controls="collapseFourteen">Can I lose money?</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapseFourteen" 
-                            aria-labelledby="headingFourteen" data-bs-parent="#accordionDefault-1">
-                                <div class="accordion-body">
-                                    There is a risk involved with investing in all high yield investment programs. 
-                                    However, there are a few simple ways that can help you to reduce the risk of losing 
-                                    more than you can afford to. First, align your investments with your financial goals, 
-                                    in other words, keep the money you may need for the short-term out of more aggressive 
-                                    investments, reserving those investment funds for the money you intend to raise over 
-                                    the long-term. It's very important for you to know that we are real traders and that 
-                                    we invest members' funds on major investments.
+                            <!-- Item 14 -->
+                            <div class="accordion-item mb-3" style="border-radius: 5px;">
+                                <h3 class="accordion-header" id="headingFourteen">
+                                    <button class="accordion-button collapsed py-1 " type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFourteen" 
+                                    aria-expanded="false" aria-controls="collapseFourteen">Can I lose money?</button>
+                                </h3>
+                                <div class="accordion-collapse collapse" id="collapseFourteen" 
+                                aria-labelledby="headingFourteen" data-bs-parent="#accordionDefault-1">
+                                    <div class="accordion-body">
+                                        There is a risk involved with investing in all high yield investment programs. 
+                                        However, there are a few simple ways that can help you to reduce the risk of losing 
+                                        more than you can afford to. First, align your investments with your financial goals, 
+                                        in other words, keep the money you may need for the short-term out of more aggressive 
+                                        investments, reserving those investment funds for the money you intend to raise over 
+                                        the long-term. It's very important for you to know that we are real traders and that 
+                                        we invest members' funds on major investments.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <style>
-        .faq {
-            background: url("{% static 'img/bg-top.jpg' %}");
-            background-size: right;
-            background-repeat: no-repeat;
-            background-position: left center;
-        }
-        .accordion-button {
-            text-transform: capitalize !important;
-        }
-        .accordion-button::after {
-            background-color: transparent;
-        }
-        .accordion-item {
-            border: 0;
-            background-color: #0b0f19;
-            color: rgba(255, 255, 255, 0.712);
-        }
+        <style>
+            .faq {
+                background: url("{% static 'img/bg-top.jpg' %}");
+                background-size: right;
+                background-repeat: no-repeat;
+                background-position: left center;
+            }
+            .accordion-button {
+                text-transform: capitalize !important;
+            }
+            .accordion-button::after {
+                background-color: transparent;
+            }
+            .accordion-item {
+                border: 0;
+                background-color: #0b0f19;
+                color: rgba(255, 255, 255, 0.712);
+            }
 
-        .accordion {
-            --si-accordion-btn-icon-box-active-bg: rgb(1, 75, 55);
-            --si-accordion-btn-icon-box-active-shadow: rgb(1, 75, 55);
-        }
-       
-    </style>
-{% endblock %}
+            .accordion {
+                --si-accordion-btn-icon-box-active-bg: rgb(1, 75, 55);
+                --si-accordion-btn-icon-box-active-shadow: rgb(1, 75, 55);
+            }
+        
+        </style>
+    {% endblock %}

@@ -1,14 +1,10 @@
-from tabnanny import verbose
 from django.db import models
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.dispatch import receiver
-from  django.db.models.signals import post_save, pre_save
-from datetime import timedelta, date, datetime
-# from django.utils import timezone
-# from django.contrib.auth import get_user_model
+from  django.db.models.signals import post_save
+from datetime import timedelta, datetime
 from .utils import generate_ref_code
 
-today = date.today()
 
 # Override Django's case-sensitive username checks 
 class CustomUserManager(UserManager):
@@ -270,7 +266,7 @@ class CustomUser(AbstractUser):
     objects = CustomUserManager()
     email = models.EmailField(unique=True, max_length=30)
     phone = models.CharField(null=True, blank=True, max_length=20, verbose_name='Phone number')
-    address = models.CharField(null=True, blank=True, max_length=30)
+    address = models.CharField(null=True, blank=True, max_length=60)
     country = models.CharField(default="", blank=True, choices=COUNTRIES, max_length=2)
     state = models.CharField(null=True, blank=True, max_length=15)
     terms = models.BooleanField(default=False)
@@ -279,7 +275,6 @@ class CustomUser(AbstractUser):
     del_account_due_date = models.DateField(null=True, blank=True, verbose_name='Delete account due date')
     balance = models.DecimalField(max_digits=1000, decimal_places=2, default=0.00, verbose_name='Account balance')
     profit = models.DecimalField(max_digits=1000, decimal_places=2, default=0.00)
-    # image = models.ImageField(upload_to='profile_img/', null=True, blank=True)
     
     def __str__(self):
         return self.username
@@ -292,19 +287,7 @@ class CustomUser(AbstractUser):
             del_account_due_date = datetime.today() + timedelta(days=instance.deactivation_duration)
         )
 
-    # @classmethod
-    # def delete_user(cls, sender, instance, created, *args, **kwargs):
-    #     """Delete user account after due date"""
-    #     user = CustomUser.objects.get(id=instance.pk)
-    #     while True:  
-    #         # if (user.del_account_due_date != None) and (today != None):
-    #         if user.del_account_due_date < today:
-    #             print(f'Days left: {(instance.del_account_due_date - today).days}')
-    #             user.delete()
-    #             break
-
 post_save.connect(CustomUser.deactivate_user, sender=CustomUser)
-# post_save.connect(CustomUser.delete_user, sender=CustomUser)
 
 
 class Referral(models.Model):
