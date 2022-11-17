@@ -22,14 +22,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# MODE=config("MODE", default="dev")
-
-# SECRET_KEY = config('SECRET_KEY')
-
-# DEBUG = config('DEBUG', default=False, cast=bool)
-
-# ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -37,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-88$utcmg&94ugcl$l-3vwlkiwek2!lkmka#8v*glx+qzrq=3hp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*', '18.168.249.187']
+ALLOWED_HOSTS = ['localhost', '13.40.240.230']
 
 
 # Application definition
@@ -105,28 +97,6 @@ DATABASES = {
     }
 }
 
-# if config('MODE')=='dev':
-#     DATABASES = {
-#     'default': {
-#         'ENGINE':'django.db.backends.postgresql',
-#         'NAME': config('DB_NAME'),
-#         'USER': config('DB_USER'),
-#         'PASSWORD': config('DB_PASSWORD'),
-#         'HOST': config('DB_HOST'),
-#         'PORT': '',
-#     }
-# }
-
-# # production
-# else:
-#     DATABASES = {
-#         'default': dj_database_url.config(
-#             default=config('DATABASE_URL')
-#         )
-#     }
-
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -200,11 +170,10 @@ CELERY_RESULT_BACKEND = 'rpc://localhost'
 
 # Email Server Configuration
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'currylabbs@gmail.com'
-EMAIL_HOST_PASSWORD = 'mhugwyjxigvrhfns'
+EMAIL_HOST_USER = 'sugarlabbs@gmail.com'
+EMAIL_HOST_PASSWORD = 'uauygjslpjdgsohr'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
-
 
 
 # RECIPIENT_ADDRESS = 

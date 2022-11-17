@@ -328,5 +328,5 @@ def my_referrals(request):
 @login_required(login_url='account:login')
 def logout_request(request):
 		logout(request)
-		# messages.info(request, 'You have successfully logged out')
+		messages.info(request, 'You have successfully logged out')
 		return redirect('account:login')

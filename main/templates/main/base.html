@@ -91,16 +91,19 @@
                     </div>
                 </div>
             </nav>
+            {% include 'main/includes/messaging.html' %}
             <div class="px-5">
                 <div class="container d-flex justify-content-center">
                     <div id="google_translate_element"></div>
                 </div>
             </div>
-            {% include 'main/includes/messaging.html' %}
+            <!-- <div class="pt-0">
+                
+            </div> -->
         </header>
         
         
-        <main class="page-wrapper">
+        <main class="page-wrapper pt-3 pt-lg-5">
                     
                     {% block content %}{% endblock %}
             

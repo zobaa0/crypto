@@ -147,7 +147,7 @@ def reset_password(request):
                 for user in associated_user:
                     context = ({
                         'user': user,
-                        'domain': '18.168.249.187',
+                        'domain': '13.40.240.230',
                         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                         'token':default_token_generator.make_token(user),
                         "protocol": 'https' if request.is_secure() else 'http',
@@ -155,7 +155,7 @@ def reset_password(request):
                     html_version = './account/mails/password_reset.html'
                     html_message = render_to_string(html_version, context)
                     subject = 'Xandcoin - Password Reset Requested'
-                    message = EmailMessage(subject, html_message, settings.EMAIL_HOST_USER, [user_email])
+                    message = EmailMessage(subject, html_message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
                     message.content_subtype = 'html'
                 try:
                     message.send()

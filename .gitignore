@@ -2,6 +2,10 @@ venv
 *.pyc
 *.pot
 *.log
+.ppk
+.pem
+Procfile
+runtime
 __pycache__
 .env
 db.sqlite3
